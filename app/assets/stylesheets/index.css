@@ -1,0 +1,21 @@
+body {
+    background-image: url("lightning.jpg");
+}
+
+h1 {
+  color: white;
+  font-family: Impact, Charcoal, sans-serif;
+  text-align: center;
+  font-size: 90px;
+  margin: 30px;
+  text-shadow: 2px 2px #000000;
+}
+
+h3 {
+  color: white;
+  font-family: Impact, Charcoal, sans-serif;
+  text-align: center;
+  font-size: 35px;
+  margin: 5px;
+  text-shadow: 2px 2px #000000;
+}
