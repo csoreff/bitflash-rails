@@ -7,7 +7,7 @@
 }
 
 #banner-content {
-  padding-top: 180px;
+  padding-top: 130px;
 }
 
 h1 {
@@ -53,4 +53,10 @@ a:visited {
 
 .row {
   padding-top: 40px;
+}
+
+.devise-forms {
+  padding-top: 50px;
+  width: 50%;
+  margin: auto;
 }
