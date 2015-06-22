@@ -1,5 +1,7 @@
 body {
   background-image: url("lightning.jpg");
+  background-size: 1500px 700px;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -14,6 +16,20 @@ h1 {
 
 h3 {
   color: white;
+  margin-bottom: 40px;
+}
+
+.fa {
+  color: white;
+  margin-bottom: 80px;
+}
+
+.fa:hover {
+  color: #C0C0C0;
+}
+
+.subtitle {
+  color: white;
   font-family: Impact, Charcoal, sans-serif;
   text-align: center;
   font-size: 35px;
@@ -22,17 +38,6 @@ h3 {
   text-shadow: 2px 2px #000000;
 }
 
-.large-4.columns {
-  color: white;
-  text-shadow: 2px 2px #000000;
-}
-
-.large-4.columns h4 {
-  color: white;
-  text-shadow: 2px 2px #000000;
-}
-
-footer p {
-  color: white;
-  text-shadow: 2px 2px #000000;
+a:visited {
+  text-decoration: none;
 }

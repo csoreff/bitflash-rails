@@ -72,5 +72,13 @@
       </div>
     </div>
   </footer>
+  <script>
+    $('arrow').click(function(){
+      $('html, body').animate({
+          scrollTop: $( $.attr(this, 'row') ).offset().top
+      }, 500);
+      return false;
+    });
+  </script>
 </body>
 </html>
