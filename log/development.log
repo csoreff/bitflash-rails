@@ -20262,3 +20262,394 @@ Started GET "/assets/users1-d51e2c82f4ff67e137f6d349555c2118dd6a00537c821e5bf2bc
 
 
 Started GET "/assets/opensource-6a99e3a86497b5559dafb8b591bd866b61c9a7c3d2f3d187423cdcb6f9b3f21f.jpg/" for ::1 at 2015-06-22 22:24:23 -0400
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-06-22 22:41:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Fz/svTxqxivtlZOBhLld3/cx4ZyIT/V7JOmE7nn54A0XNmdvEIEhboLUimTGFAtxuG/b+JlcP9j01nGOKqrNKQ=="}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 163ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for ::1 at 2015-06-22 22:41:11 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (202.6ms)
+Completed 200 OK in 843ms (Views: 842.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:41:15 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered my_devise/registrations/new.html.erb within layouts/application (112.0ms)
+Completed 200 OK in 260ms (Views: 258.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-06-22 22:41:41 -0400
+Processing by MyDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aFuQHor+clWigdSrlUYgb4ZCO6KNS2pYfwxd27cjOVaK5+jzMwHX9PTjXq0nA8FoR3u5YBBIMu2yH5mbIWt8AQ==", "user"=>{"first_name"=>"test", "last_name"=>"test", "email"=>"somanytests@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "passphrase"=>"test"}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 19859ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/my_devise/registrations_controller.rb:20:in `exit'
+  app/controllers/my_devise/registrations_controller.rb:20:in `create'
+  app/controllers/my_devise/registrations_controller.rb:20:in `create'
+
+
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (217.1ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (52.6ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (315.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (51.7ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (92.6ms)
+
+
+Started POST "/users" for ::1 at 2015-06-22 22:42:12 -0400
+Processing by MyDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aFuQHor+clWigdSrlUYgb4ZCO6KNS2pYfwxd27cjOVaK5+jzMwHX9PTjXq0nA8FoR3u5YBBIMu2yH5mbIWt8AQ==", "user"=>{"first_name"=>"test", "last_name"=>"test", "email"=>"somanytests@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "passphrase"=>"test"}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 788ms (ActiveRecord: 0.0ms)
+
+Patchboard::Action::ResponseError (Unexpected response status: 409 - {"message":"conflict","reason":"GemAPI::Conflict"}):
+  app/controllers/my_devise/registrations_controller.rb:10:in `create'
+
+
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (280.2ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (61.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.8ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (381.1ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (51.6ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.6ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (103.3ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:42:34 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.8ms)
+  Rendered my_devise/registrations/new.html.erb within layouts/application (85.6ms)
+Completed 200 OK in 1740ms (Views: 1646.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 22:42:36 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 22:42:36 -0400
+
+
+Started GET "/assets/index.self-7ca5904735cbc1f3189934467b2220ad55c0f9d0210c4c7284c744bf6cdf75df.css?body=1" for ::1 at 2015-06-22 22:42:36 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 22:42:36 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 22:42:36 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 22:42:36 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 22:42:36 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 22:42:36 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 22:42:37 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 22:42:37 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 22:42:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 22:42:37 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 22:42:37 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 22:42:37 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 22:42:37 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 22:42:37 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 22:42:37 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 22:42:37 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 22:42:37 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 22:42:37 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 22:42:37 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 22:42:38 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 22:42:38 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 22:42:38 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 22:42:38 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 22:42:38 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 22:42:38 -0400
+
+
+Started POST "/users" for ::1 at 2015-06-22 22:42:51 -0400
+Processing by MyDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j5Dl/Q/CXMcurXD3BiPZJbM80e9tKcmCAOYt7+Rm0qltLJ0Qtj35ZnjP+vG0ZjgicgVTLfAqkTfN9emvci6X/g==", "user"=>{"first_name"=>"test", "last_name"=>"test", "email"=>"omgsomanytests@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "passphrase"=>"test"}, "commit"=>"Sign up"}
+Unpermitted parameter: passphrase
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'omgsomanytests@test.com' LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "device_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "test"], ["last_name", "test"], ["email", "omgsomanytests@test.com"], ["encrypted_password", "$2a$10$VoSkZO6J4YG.PCY4otNYV.HbQUM4sBtpZmzsSnnU1s4CrIMyKfxS."], ["device_token", "rYJESPu1ER_UMVu2R23VWwRqxQPIt60OexT3E2CvX8A"], ["created_at", "2015-06-23 02:42:52.392855"], ["updated_at", "2015-06-23 02:42:52.392855"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7  [["last_sign_in_at", "2015-06-23 02:42:52.454912"], ["current_sign_in_at", "2015-06-23 02:42:52.454912"], ["last_sign_in_ip", "::1/128"], ["current_sign_in_ip", "::1/128"], ["sign_in_count", 1], ["updated_at", "2015-06-23 02:42:52.469576"], ["id", 2]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1320ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/" for ::1 at 2015-06-22 22:42:52 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (85.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 2474ms (Views: 2469.1ms | ActiveRecord: 1.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+
+
+Started GET "/users/sign_out" for ::1 at 2015-06-22 22:48:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/corey/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/corey/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/corey/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (25.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (33.1ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.7ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (18.7ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (41.9ms)
+
+
+Started GET "/" for ::1 at 2015-06-22 22:48:34 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (202.9ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 1631ms (Views: 1624.0ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/index.self-b16b46bcdd07d63c5272c2747a466b5c54706ebae2eaccab89f2823a4af80db8.css?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/btc1-8288cc1ab9d8e5b5b7afefc49db8e89187fdfe43661578326115be1d804fb9bb.jpg/" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/lightning.jpg" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/users1-d51e2c82f4ff67e137f6d349555c2118dd6a00537c821e5bf2bc348acffe3dab.jpg/" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started GET "/assets/opensource-6a99e3a86497b5559dafb8b591bd866b61c9a7c3d2f3d187423cdcb6f9b3f21f.jpg/" for ::1 at 2015-06-22 22:48:36 -0400
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-06-22 22:48:38 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"coLnz7LXEEA8SI6dmF0B3oqgo8pZWfaql68Mo/Vz/XuQPp8iCyi14WoqBJsqGODZS5khCMRarh9avMjjYzu4LA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 475ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2015-06-22 22:48:39 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 188ms (Views: 187.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-06-22 22:49:48 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (83.4ms)
+Completed 200 OK in 348ms (Views: 299.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.self-75688751516a893410cd6f4cc27e3e65778d2b7727a38ef9d2882e21552f3858.css?body=1" for ::1 at 2015-06-22 22:49:48 -0400
+
+
+Started POST "/users/sign_in" for ::1 at 2015-06-22 22:49:52 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I62Eb6XqZ4EX4o80Fr/u8uvt3k5mYwRdc57VhDyqKvlCh1aNUdOjr4N2T2nOnz4YlJAuM+g0QJ2dJNwoCGnU6Q==", "user"=>{"email"=>"omgsomanytests@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "omgsomanytests@test.com"]]
+Completed 401 Unauthorized in 131ms (ActiveRecord: 0.8ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I62Eb6XqZ4EX4o80Fr/u8uvt3k5mYwRdc57VhDyqKvlCh1aNUdOjr4N2T2nOnz4YlJAuM+g0QJ2dJNwoCGnU6Q==", "user"=>{"email"=>"omgsomanytests@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 212ms (Views: 134.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-06-22 22:50:01 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sBS8bkJpPqy1yBbgzniuEraSpYDrHrh0SiyNCqMmX/bRPm6MtlD6giFc1r0WWH74ye9V/WVJ/LSkloSml+Wh5g==", "user"=>{"email"=>"omgsomanytests@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "omgsomanytests@test.com"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2015-06-23 02:50:01.756881"], ["sign_in_count", 2], ["updated_at", "2015-06-23 02:50:01.759336"], ["id", 2]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 90ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2015-06-22 22:50:01 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 155ms (Views: 154.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/lightning.jpg" for ::1 at 2015-06-22 22:50:02 -0400

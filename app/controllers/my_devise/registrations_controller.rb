@@ -7,7 +7,7 @@ class MyDevise::RegistrationsController < Devise::RegistrationsController
     password = params[:user][:password]
     passphrase = params[:user][:passphrase]
     client.authenticate_identify(api_token: ENV['ROUND_API_TOKEN'])
-    device_token = client.users.create(
+    params[:user][:device_token] = client.users.create(
       first_name: first_name,
       last_name: last_name,
       email: email,
@@ -16,6 +16,16 @@ class MyDevise::RegistrationsController < Devise::RegistrationsController
       redirect_uri: 'https://bitflash.herokuapp.com'
     )
     # Keep original functionality of RegistrationsController, just add to it
-    super unless device_token.nil?
+    super unless :device_token.nil?
+  end
+
+  private
+
+  def sign_up_params
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :device_token)
+  end
+
+  def account_update_params
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :current_password)
   end
 end

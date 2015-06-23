@@ -13,6 +13,6 @@ test:
 
 production:
   <<: *default
-  database: bitflash_production
-  username: bitflash
+  database: d3f1qiljbmsalt
+  username: mrrsgdvbqeqqjk
   password: <%= ENV['BITFLASH_DATABASE_PASSWORD'] %>

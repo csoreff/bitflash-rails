@@ -26,3 +26,5 @@ gem 'shoulda-matchers', group: [:development, :test], require: false
 gem 'devise'
 gem 'foundation-rails'
 gem "font-awesome-rails"
+
+ruby "2.1.5"

@@ -61,3 +61,10 @@ a:visited {
   width: 50%;
   margin: auto;
 }
+
+.flash.flash-notice {
+  background-color: gray;
+  text-align: center;
+  color: white;
+  height: 30px;
+}
