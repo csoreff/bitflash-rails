@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  attr_accessor :passphrase
+
   has_many :friendships
   has_many :friends, :through => :friendships
 

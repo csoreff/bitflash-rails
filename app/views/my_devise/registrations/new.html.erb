@@ -1,16 +1,16 @@
 <div class="devise-forms" id="devise-forms">
   <h2>Sign up</h2>
-
+  <br />
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
     <div class="field">
-      <%= f.label :first_name %>
+      <%= f.label :first_name %><br />
       <%= f.text_field :first_name, autofocus: true %>
     </div>
 
     <div class="field">
-      <%= f.label :last_name %>
+      <%= f.label :last_name %><br />
       <%= f.text_field :last_name %>
     </div>
 
@@ -33,7 +33,7 @@
     </div>
 
     <div class="field">
-      <%= f.label (:passphrase, "Passphrase (Save this!  You will need it if you ever lose access to your wallet!)") %>
+      <%= f.label :passphrase %><br />
       <%= f.text_field :passphrase %>
     </div>
 

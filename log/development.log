@@ -18542,3 +18542,1723 @@ Processing by Devise::RegistrationsController#new as HTML
   Rendered devise/shared/_links.html.erb (0.2ms)
   Rendered devise/registrations/new.html.erb within layouts/application (3.4ms)
 Completed 200 OK in 132ms (Views: 131.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-06-22 14:22:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (177.4ms)
+Completed 200 OK in 437ms (Views: 436.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/index.self-d702d3d83259dd1d083af36476cf5a06c2f2e5db13399596095bf81f4c873a48.css?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/btc1-8288cc1ab9d8e5b5b7afefc49db8e89187fdfe43661578326115be1d804fb9bb.jpg/" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/assets/users1-d51e2c82f4ff67e137f6d349555c2118dd6a00537c821e5bf2bc348acffe3dab.jpg/" for ::1 at 2015-06-22 14:22:19 -0400
+
+
+Started GET "/" for ::1 at 2015-06-22 14:25:04 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 515ms (Views: 514.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/index.self-d702d3d83259dd1d083af36476cf5a06c2f2e5db13399596095bf81f4c873a48.css?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/btc1-8288cc1ab9d8e5b5b7afefc49db8e89187fdfe43661578326115be1d804fb9bb.jpg/" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 14:25:04 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 14:25:05 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 14:25:05 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 14:25:05 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 14:25:05 -0400
+
+
+Started GET "/assets/users1-d51e2c82f4ff67e137f6d349555c2118dd6a00537c821e5bf2bc348acffe3dab.jpg/" for ::1 at 2015-06-22 14:25:05 -0400
+
+
+Started GET "/assets/opensource-edd4d13d681f3a6f9cc8ce74ea343d1be56c6bd9ad7c03e5c30132f3c8ca1dd3.jpg/" for ::1 at 2015-06-22 14:25:05 -0400
+
+
+Started GET "/" for ::1 at 2015-06-22 14:26:12 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 160ms (Views: 160.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.self-d702d3d83259dd1d083af36476cf5a06c2f2e5db13399596095bf81f4c873a48.css?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/btc1-8288cc1ab9d8e5b5b7afefc49db8e89187fdfe43661578326115be1d804fb9bb.jpg/" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/users1-d51e2c82f4ff67e137f6d349555c2118dd6a00537c821e5bf2bc348acffe3dab.jpg/" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/assets/opensource-6a99e3a86497b5559dafb8b591bd866b61c9a7c3d2f3d187423cdcb6f9b3f21f.jpg/" for ::1 at 2015-06-22 14:26:12 -0400
+
+
+Started GET "/" for ::1 at 2015-06-22 14:27:52 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 142ms (Views: 141.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/btc1-8288cc1ab9d8e5b5b7afefc49db8e89187fdfe43661578326115be1d804fb9bb.jpg/" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/index.self-d702d3d83259dd1d083af36476cf5a06c2f2e5db13399596095bf81f4c873a48.css?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/opensource-6a99e3a86497b5559dafb8b591bd866b61c9a7c3d2f3d187423cdcb6f9b3f21f.jpg/" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/assets/users1-d51e2c82f4ff67e137f6d349555c2118dd6a00537c821e5bf2bc348acffe3dab.jpg/" for ::1 at 2015-06-22 14:27:52 -0400
+
+
+Started GET "/" for ::1 at 2015-06-22 14:27:59 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 150ms (Views: 150.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/btc1-8288cc1ab9d8e5b5b7afefc49db8e89187fdfe43661578326115be1d804fb9bb.jpg/" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/index.self-d702d3d83259dd1d083af36476cf5a06c2f2e5db13399596095bf81f4c873a48.css?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/opensource-6a99e3a86497b5559dafb8b591bd866b61c9a7c3d2f3d187423cdcb6f9b3f21f.jpg/" for ::1 at 2015-06-22 14:27:59 -0400
+
+
+Started GET "/assets/users1-d51e2c82f4ff67e137f6d349555c2118dd6a00537c821e5bf2bc348acffe3dab.jpg/" for ::1 at 2015-06-22 14:27:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNameAndDeviceTokenToUsers (20150623013946)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (119.1ms)[0m  [1mALTER TABLE "users" ADD "first_name" character varying[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD "last_name" character varying
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "device_token" character varying[0m
+  [1m[35mSQL (13.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150623013946"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (30.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'friendships'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for ::1 at 2015-06-22 22:01:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (258.3ms)
+Completed 200 OK in 1555ms (Views: 1554.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/lightning.jpg" for ::1 at 2015-06-22 22:01:40 -0400
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:01:42 -0400
+
+ActionController::RoutingError (uninitialized constant Devise::MyDevise):
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:276:in `const_get'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:276:in `block in constantize'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/corey/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/corey/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/corey/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.9ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (86.2ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (21.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (43.8ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:02:04 -0400
+
+ActionController::RoutingError (super called outside of method):
+  app/controllers/my_devise/registrations_controller.rb:2:in `<class:RegistrationsController>'
+  app/controllers/my_devise/registrations_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.5ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.1ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (32.1ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:03:14 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered my_devise/registrations/new.html.erb within layouts/application (168.0ms)
+Completed 200 OK in 340ms (Views: 321.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 22:03:14 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 22:03:14 -0400
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 22:03:14 -0400
+
+
+Started GET "/assets/index.self-d702d3d83259dd1d083af36476cf5a06c2f2e5db13399596095bf81f4c873a48.css?body=1" for ::1 at 2015-06-22 22:03:14 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 22:03:14 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 22:03:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 22:03:14 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 22:03:14 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 22:03:15 -0400
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:03:52 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered my_devise/registrations/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/corey/rails_projects/bitflash/app/views/my_devise/registrations/new.html.erb:36: syntax error, unexpected ',', expecting ')'
+....append=( f.label (:passphrase, "Passphrase (Save this!  You...
+...                               ^
+/Users/corey/rails_projects/bitflash/app/views/my_devise/registrations/new.html.erb:36: syntax error, unexpected ')', expecting keyword_end
+...ose access to your wallet!)") );@output_buffer.safe_append='
+...                               ^):
+  app/views/my_devise/registrations/new.html.erb:36: syntax error, unexpected ',', expecting ')'
+  app/views/my_devise/registrations/new.html.erb:36: syntax error, unexpected ')', expecting keyword_end
+
+
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.7ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.6ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.5ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (30.1ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:04:34 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered my_devise/registrations/new.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `passphrase' for #<User:0x007fe78b2d1e58>):
+    34: 
+    35:     <div class="field">
+    36:       <%= f.label :passphrase %>
+    37:       <%= f.text_field :passphrase %>
+    38:     </div>
+    39: 
+    40:     <div class="actions">
+  app/views/my_devise/registrations/new.html.erb:37:in `block in _app_views_my_devise_registrations_new_html_erb__4482388901939260485_70316227580820'
+  app/views/my_devise/registrations/new.html.erb:4:in `_app_views_my_devise_registrations_new_html_erb__4482388901939260485_70316227580820'
+
+
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.6ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (32.3ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:08:22 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered my_devise/registrations/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 3.2ms)
+
+ActionView::Template::Error (undefined method `passphrase' for #<User:0x007fe785a22e88>):
+    34: 
+    35:     <div class="field">
+    36:       <%= f.label :passphrase %>
+    37:       <%= f.text_field :passphrase %>
+    38:     </div>
+    39: 
+    40:     <div class="actions">
+  app/views/my_devise/registrations/new.html.erb:37:in `block in _app_views_my_devise_registrations_new_html_erb__4482388901939260485_70316227580820'
+  app/views/my_devise/registrations/new.html.erb:4:in `_app_views_my_devise_registrations_new_html_erb__4482388901939260485_70316227580820'
+
+
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.1ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (31.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:08:37 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered my_devise/registrations/new.html.erb within layouts/application (29.9ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 5.4ms)
+
+ActionView::Template::Error (undefined method `passphrase' for #<User:0x007fe3dc4ecf60>):
+    34: 
+    35:     <div class="field">
+    36:       <%= f.label :passphrase %>
+    37:       <%= f.text_field :passphrase %>
+    38:     </div>
+    39: 
+    40:     <div class="actions">
+  app/views/my_devise/registrations/new.html.erb:37:in `block in _app_views_my_devise_registrations_new_html_erb___3465547542527816324_70308344290580'
+  app/views/my_devise/registrations/new.html.erb:4:in `_app_views_my_devise_registrations_new_html_erb___3465547542527816324_70308344290580'
+
+
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.0ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (17.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (40.3ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:09:22 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered my_devise/registrations/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 405ms (Views: 391.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/index.self-d702d3d83259dd1d083af36476cf5a06c2f2e5db13399596095bf81f4c873a48.css?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 22:09:23 -0400
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:09:57 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered my_devise/registrations/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 230ms (Views: 229.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.self-7ca5904735cbc1f3189934467b2220ad55c0f9d0210c4c7284c744bf6cdf75df.css?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 22:09:57 -0400
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:11:02 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered my_devise/registrations/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 146ms (Views: 144.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 22:11:02 -0400
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 22:11:02 -0400
+
+
+Started GET "/assets/index.self-7ca5904735cbc1f3189934467b2220ad55c0f9d0210c4c7284c744bf6cdf75df.css?body=1" for ::1 at 2015-06-22 22:11:02 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 22:11:02 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 22:11:02 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 22:11:02 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 22:11:02 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 22:11:02 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 22:11:03 -0400
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:11:15 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered my_devise/registrations/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 143ms (Views: 142.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/index.self-7ca5904735cbc1f3189934467b2220ad55c0f9d0210c4c7284c744bf6cdf75df.css?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 22:11:16 -0400
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:12:11 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered my_devise/registrations/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 142ms (Views: 140.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/index.self-7ca5904735cbc1f3189934467b2220ad55c0f9d0210c4c7284c744bf6cdf75df.css?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 22:12:11 -0400
+
+
+Started GET "/users/sign_in" for ::1 at 2015-06-22 22:12:15 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 197ms (Views: 181.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:16:04 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered my_devise/registrations/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 176ms (Views: 160.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/index.self-7ca5904735cbc1f3189934467b2220ad55c0f9d0210c4c7284c744bf6cdf75df.css?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 22:16:05 -0400
+
+
+Started POST "/users" for ::1 at 2015-06-22 22:16:31 -0400
+Processing by MyDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WnHIM0Ycu/2wWXhlgHSOpn0U/NUPCKrkdpw1z2mKRXdaeEPhavdcuN8YYYDC2dgIMkrGsR4bYEemo8CvOtloUw==", "user"=>{"first_name"=>"test", "last_name"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "passphrase"=>"test"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (44.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 247735ms (ActiveRecord: 44.1ms)
+
+SystemExit (exit):
+  app/controllers/my_devise/registrations_controller.rb:4:in `exit'
+  app/controllers/my_devise/registrations_controller.rb:4:in `create'
+  app/controllers/my_devise/registrations_controller.rb:4:in `create'
+
+
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (223.7ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (51.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.6ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (316.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (12.6ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (48.8ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.8ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (90.5ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:21:28 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.1ms)
+  Rendered my_devise/registrations/new.html.erb within layouts/application (66.8ms)
+Completed 200 OK in 1509ms (Views: 1427.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 22:21:30 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 22:21:30 -0400
+
+
+Started GET "/assets/index.self-7ca5904735cbc1f3189934467b2220ad55c0f9d0210c4c7284c744bf6cdf75df.css?body=1" for ::1 at 2015-06-22 22:21:30 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 22:21:30 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 22:21:30 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 22:21:30 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 22:21:31 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 22:21:31 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 22:21:31 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 22:21:31 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 22:21:31 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 22:21:31 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 22:21:31 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 22:21:31 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 22:21:31 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 22:21:31 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 22:21:31 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 22:21:31 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 22:21:31 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 22:21:31 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 22:21:32 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 22:21:32 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 22:21:32 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 22:21:32 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 22:21:32 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 22:21:32 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 22:21:32 -0400
+
+
+Started POST "/users" for ::1 at 2015-06-22 22:21:49 -0400
+Processing by MyDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TEVix8zM4Qe+Si4b7CCyDzBubnBEs/8OGmQNeMx4ontOJ5ZM9jUwXG4MV0tHdRmc5+D3dABBV/oVmVVsGLPrQ==", "user"=>{"first_name"=>"test", "last_name"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "passphrase"=>"test"}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 21016ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/my_devise/registrations_controller.rb:10:in `exit'
+  app/controllers/my_devise/registrations_controller.rb:10:in `create'
+  app/controllers/my_devise/registrations_controller.rb:10:in `create'
+
+
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (429.0ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (102.8ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.9ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (572.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (2.8ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (63.7ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (2.9ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (139.1ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 22:23:24 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.8ms)
+  Rendered my_devise/registrations/new.html.erb within layouts/application (63.5ms)
+Completed 200 OK in 1516ms (Views: 1422.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 22:23:26 -0400
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 22:23:26 -0400
+
+
+Started GET "/assets/index.self-7ca5904735cbc1f3189934467b2220ad55c0f9d0210c4c7284c744bf6cdf75df.css?body=1" for ::1 at 2015-06-22 22:23:27 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 22:23:27 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 22:23:27 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 22:23:27 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 22:23:27 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 22:23:27 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 22:23:27 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 22:23:27 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 22:23:27 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 22:23:27 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 22:23:27 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 22:23:27 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 22:23:28 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 22:23:28 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 22:23:28 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 22:23:28 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 22:23:28 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 22:23:28 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 22:23:28 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 22:23:28 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 22:23:28 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 22:23:28 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 22:23:28 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 22:23:28 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 22:23:28 -0400
+
+
+Started POST "/users" for ::1 at 2015-06-22 22:23:54 -0400
+Processing by MyDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y5JXKlx/jw4cbh6Boms8z0nFmpLKQ+tJDtXcokV/l0Jjm9z4cJRoS3MvB2TgxmphBpug9ttQIere6inCFiy6Zg==", "user"=>{"first_name"=>"test", "last_name"=>"test", "email"=>"testytest4495@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "passphrase"=>"test"}, "commit"=>"Sign up"}
+Unpermitted parameters: first_name, last_name, passphrase
+  [1m[36m (9.6ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (11.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'testytest4495@test.com' LIMIT 1
+  [1m[36mSQL (13.9ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "testytest4495@test.com"], ["encrypted_password", "$2a$10$obGsuCpi8BTWD2cmI4Kk5e79M4RM4PLGMEgbRYeYryk8OgudiFGHi"], ["created_at", "2015-06-23 02:23:56.144393"], ["updated_at", "2015-06-23 02:23:56.144393"]]
+  [1m[35m (22.8ms)[0m  COMMIT
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7  [["last_sign_in_at", "2015-06-23 02:23:56.233884"], ["current_sign_in_at", "2015-06-23 02:23:56.233884"], ["last_sign_in_ip", "::1/128"], ["current_sign_in_ip", "::1/128"], ["sign_in_count", 1], ["updated_at", "2015-06-23 02:23:56.261891"], ["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1455ms (ActiveRecord: 61.8ms)
+
+
+Started GET "/" for ::1 at 2015-06-22 22:23:56 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (101.9ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 2402ms (Views: 2398.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/lightning.jpg" for ::1 at 2015-06-22 22:23:59 -0400
+
+
+Started GET "/assets/fontawesome-webfont-aadc3580d2b64ff5a7e6f1425587db4e8b033efcbf8f5c332ca52a5ed580c87c.woff2?v=4.3.0" for ::1 at 2015-06-22 22:23:59 -0400
+
+
+Started GET "/" for ::1 at 2015-06-22 22:24:19 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (53.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 1594ms (Views: 1591.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-06-22 22:24:21 -0400
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-22 22:24:21 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-06-22 22:24:21 -0400
+
+
+Started GET "/assets/index.self-7ca5904735cbc1f3189934467b2220ad55c0f9d0210c4c7284c744bf6cdf75df.css?body=1" for ::1 at 2015-06-22 22:24:21 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-06-22 22:24:21 -0400
+
+
+Started GET "/assets/btc1-8288cc1ab9d8e5b5b7afefc49db8e89187fdfe43661578326115be1d804fb9bb.jpg/" for ::1 at 2015-06-22 22:24:21 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-22 22:24:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-22 22:24:21 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-22 22:24:21 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-22 22:24:21 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-22 22:24:21 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-22 22:24:22 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-22 22:24:22 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-22 22:24:22 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-22 22:24:22 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-22 22:24:22 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-22 22:24:22 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-22 22:24:22 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-22 22:24:22 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-22 22:24:22 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-22 22:24:22 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-22 22:24:22 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-22 22:24:22 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-22 22:24:22 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-22 22:24:23 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-22 22:24:23 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-22 22:24:23 -0400
+
+
+Started GET "/assets/application.self-6ad623e8d66980ac7444c92b6bcda3386c264f53d8f1c556ba4eaa775f3e9794.js?body=1" for ::1 at 2015-06-22 22:24:23 -0400
+
+
+Started GET "/assets/users1-d51e2c82f4ff67e137f6d349555c2118dd6a00537c821e5bf2bc348acffe3dab.jpg/" for ::1 at 2015-06-22 22:24:23 -0400
+
+
+Started GET "/assets/opensource-6a99e3a86497b5559dafb8b591bd866b61c9a7c3d2f3d187423cdcb6f9b3f21f.jpg/" for ::1 at 2015-06-22 22:24:23 -0400

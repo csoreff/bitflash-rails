@@ -57,6 +57,7 @@ a:visited {
 
 .devise-forms {
   padding-top: 50px;
+  padding-bottom: 10px;
   width: 50%;
   margin: auto;
 }
