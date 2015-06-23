@@ -20653,3 +20653,185 @@ Completed 200 OK in 155ms (Views: 154.1ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/assets/lightning.jpg" for ::1 at 2015-06-22 22:50:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (2.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'xlive4honorx@gmail.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+
+
+Started GET "/" for ::1 at 2015-06-22 23:37:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (182.9ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 781ms (Views: 774.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for ::1 at 2015-06-22 23:37:47 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 137ms (Views: 135.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/index.self-774a6f9cedaa4211b3415f956cbb28bcae7dd9acf80744aafacf7814454ba4bc.css?body=1" for ::1 at 2015-06-22 23:37:48 -0400
+
+
+Started GET "/assets/lightning-409485b0d5fe054049d1c1c6c38eb95b73002a4121c953e467bd759fce3a84aa.jpg" for ::1 at 2015-06-22 23:37:48 -0400
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-06-22 23:37:51 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Tb42Fd/2pS/oF9MMw+rTJCyPwu2FvisJBfp7kY9YXAX8Qydrl1UW8WfQXXNpwFyX95fAVPeZHKwmgh9nQ6Fxtg=="}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2015-06-22 23:37:52 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 134ms (Views: 133.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-06-22 23:37:54 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 256ms (Views: 253.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-06-22 23:38:03 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CiUrCUuv7UDJ9fzHAxI3VGD2rVNoHGEMiO17gXBZoV+7Nfue63kwzHwWAwjVKfwI4iKfGS+0ed4RKHfQdUGt+g==", "user"=>{"email"=>"xlive4honorx@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "xlive4honorx@gmail.com"]]
+Completed 401 Unauthorized in 50ms (ActiveRecord: 0.6ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CiUrCUuv7UDJ9fzHAxI3VGD2rVNoHGEMiO17gXBZoV+7Nfue63kwzHwWAwjVKfwI4iKfGS+0ed4RKHfQdUGt+g==", "user"=>{"email"=>"xlive4honorx@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 221ms (Views: 146.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2015-06-22 23:38:05 -0400
+Processing by Devise::PasswordsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 157ms (Views: 156.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for ::1 at 2015-06-22 23:38:13 -0400
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g5XTiKvs1Fi7nzE9bowe6QS1BqDscDJ2q5etdPRwF6syhQMfCzoJ1A58zvK4t9W1hmE06qvYKqQyUqEl8WgbDg==", "user"=>{"email"=>"xlive4honorx@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "xlive4honorx@gmail.com"]]
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 195ms (Views: 149.9ms | ActiveRecord: 0.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mUser Exists (1.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'xlive4honorx@gmail.com' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+
+
+Started GET "/" for ::1 at 2015-06-22 23:41:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (223.3ms)
+Completed 200 OK in 441ms (Views: 440.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-06-22 23:41:37 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 174ms (Views: 174.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-06-22 23:41:38 -0400
+Processing by MyDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered my_devise/registrations/new.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 269ms (Views: 252.1ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/users" for ::1 at 2015-06-22 23:41:54 -0400
+Processing by MyDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QlTdOhMl3q/FbV5LVa5Has9tvWxf/mhCwdUXgt/V+bfzRA2ts/MDI3COoYSDlYw2TbmPJhhWcJBYEBvT2s31Eg==", "user"=>{"first_name"=>"Corey", "last_name"=>"Soreff", "email"=>"xlive4honorx@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "passphrase"=>"eucibous77"}, "commit"=>"Sign up"}
+Unpermitted parameter: passphrase
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'xlive4honorx@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "Corey"], ["last_name", "Soreff"], ["email", "xlive4honorx@gmail.com"], ["encrypted_password", "$2a$10$Y3Gly82slIMyrFUtFdkVmOWvUtNlcOWUJ9ePnxIOIha0FMgG5Vd8y"], ["created_at", "2015-06-23 03:41:54.451629"], ["updated_at", "2015-06-23 03:41:54.451629"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["last_sign_in_at", "2015-06-23 03:41:54.457059"], ["current_sign_in_at", "2015-06-23 03:41:54.457059"], ["last_sign_in_ip", "::1/128"], ["current_sign_in_ip", "::1/128"], ["sign_in_count", 1], ["updated_at", "2015-06-23 03:41:54.458729"], ["id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 1768ms (ActiveRecord: 4.8ms)
+
+Patchboard::Action::ResponseError (Unexpected response status: 409 - {"message":"conflict","reason":"GemAPI::Conflict"}):
+  app/controllers/my_devise/registrations_controller.rb:11:in `create'
+
+
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.0ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (18.7ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (43.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "device_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["device_token", "ONEkbywfw1OY7P0G1NNV3Q-vmtVbi-4qZAj-FSHCi_A"], ["updated_at", "2015-06-23 03:43:19.684150"], ["id", 3]]
+  [1m[35m (0.7ms)[0m  COMMIT
+
+
+Started GET "/users/sign_in" for ::1 at 2015-06-22 23:43:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 477ms (Views: 432.3ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-06-22 23:43:53 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5paCeN+DE4MXc1dnm83AmHMXvX0QIQLLVeDn3LL3rX5XhlLvf1XOD6KQqKhN9gvE8cOPN1eJGhnMJeuNt++h2w==", "user"=>{"email"=>"xlive4honorx@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "xlive4honorx@gmail.com"]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4  [["current_sign_in_at", "2015-06-23 03:43:53.164563"], ["sign_in_count", 2], ["updated_at", "2015-06-23 03:43:53.167559"], ["id", 3]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 139ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2015-06-22 23:43:53 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (5.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 142ms (Views: 141.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-06-22 23:43:57 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3EhJhDuakFfIak9tqgA6AJQ0wQTVvVv873e2fEu2VnXJmB3Z9ZszR+4YzYGWiZqcYELXd52S+//2eBOmGJcRfA=="}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-06-22 23:43:58 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 187ms (Views: 187.1ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
