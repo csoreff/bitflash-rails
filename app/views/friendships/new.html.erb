@@ -1,0 +1,5 @@
+<%= form_tag("/friendships", method: "get", class: "devise-forms") do %>
+  <%= label_tag(:search, "Search for a friend by email:") %>
+  <%= text_field_tag(:search) %>
+  <%= submit_tag("Search") %>
+<% end %>

@@ -1,3 +1,4 @@
+<% unless current_user %>
   <div class="banner" id="banner">
     <div class="banner-content" id="banner-content">
       <h1>B i t F l a s h</h1>
@@ -58,4 +59,25 @@
       </div>
     </div>
   </footer>
+<% end %>
 
+<% if current_user %>
+  <div class="row">
+    <div class="large-9 columns" role="content">
+
+    </div>
+
+    <aside class="large-3 columns">
+      <div class="panel">
+        <h5>Friends</h5>
+        <ul class="side-nav">
+          <% @friendships.each do |friendship| %>
+            <li><%= "#{friendship.friend.first_name} #{friendship.friend.last_name}"unless friendship.friend.nil? %></li>
+          <% end %>
+        </ul>
+        <%= link_to "Add New Friend", controller: "friendships", action: "new" %>
+      </div>
+
+    </aside>
+  </div>
+<% end %>

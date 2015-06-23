@@ -1,0 +1,23 @@
+<%= form_tag("/friendships", method: "get", class: "devise-forms") do %>
+  <%= label_tag(:search, "Search for a friend by email:") %>
+  <%= text_field_tag(:search) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<% if @search_result %>
+  <div class="devise-forms">
+    <div class="panel">
+      <table>
+        <tr>
+          <td>User Name</td>
+          <td>User Email</td>
+        </tr>
+        <tr>
+          <td><%= "#{@search_result.first_name} #{@search_result.last_name}" %></td>
+          <td><%= "#{@search_result.email}"%></td>
+          <td><%= link_to "Add Friend", friendships_path(:friend_id => @search_result), :method => :post %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<% end %>
