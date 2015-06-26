@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   attr_accessor :passphrase
 
   has_many :friendships
+  has_many :addresses
   has_many :friends, :through => :friendships
 
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"

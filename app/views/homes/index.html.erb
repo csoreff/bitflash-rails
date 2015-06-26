@@ -63,21 +63,31 @@
 
 <% if current_user %>
   <div class="row">
-    <div class="large-9 columns" role="content">
+    <div class="large-8 columns" role="content">
+      <div class="panel">
+        <% 10.times do %>
+          <p><%= "Transaction = 100btc to Jane Doe 1/1/11" %></p>
+        <% end %>
+      </div>
 
     </div>
 
-    <aside class="large-3 columns">
+    <aside class="large-4 columns">
       <div class="panel">
         <h5>Friends</h5>
-        <ul class="side-nav">
-          <% @friendships.each do |friendship| %>
-            <li><%= "#{friendship.friend.first_name} #{friendship.friend.last_name}"unless friendship.friend.nil? %></li>
-          <% end %>
-        </ul>
+        <br>
+        <% @friendships.each do |friendship| %>
+          <ul class="stack button-group">
+            <li><a data-dropdown="drop" class="button"><%= friendship.friend.first_name + " " + friendship.friend.last_name unless friendship.friend.nil?%></a><li>
+          </ul>
+          <ul id="drop" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+            <li><a href="#">Send Money</a></li>
+            <li><a href="#">Delete Friend</a></li>
+          </ul>
+        <% end %>
+        <br><br>
         <%= link_to "Add New Friend", controller: "friendships", action: "new" %>
       </div>
-
     </aside>
   </div>
 <% end %>
