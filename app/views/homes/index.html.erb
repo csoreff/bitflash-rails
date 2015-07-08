@@ -1,4 +1,4 @@
-<% unless current_user %>
+<% unless user_signed_in? %>
   <div class="banner" id="banner">
     <div class="banner-content" id="banner-content">
       <h1>B i t F l a s h</h1>
@@ -61,7 +61,7 @@
   </footer>
 <% end %>
 
-<% if current_user %>
+<% if user_signed_in? %>
   <div class="row">
     <div class="large-8 columns" role="content">
       <div class="panel">
@@ -78,7 +78,7 @@
         <br>
         <% @friendships.each do |friendship| %>
           <ul class="stack button-group">
-            <li><a data-dropdown="drop" class="button"><%= friendship.friend.first_name + " " + friendship.friend.last_name unless friendship.friend.nil?%></a><li>
+            <li><a data-dropdown="drop" class="button friend-button"><%= friendship.friend.first_name + " " + friendship.friend.last_name unless friendship.friend.nil?%></a><li>
           </ul>
           <ul id="drop" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
             <li><a href="#">Send Money</a></li>
