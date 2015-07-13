@@ -6,7 +6,7 @@ feature 'user signs in', %Q{
   I want to sign in
   So that I can regain access to my account
 } do
-  scenario 'specify valid credentials', vcr: true do
+  scenario 'specify valid credentials' do
     user = FactoryGirl.create(:user)
 
     visit new_user_session_path

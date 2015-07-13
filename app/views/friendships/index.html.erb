@@ -15,7 +15,7 @@
         <tr>
           <td><%= "#{@search_result.first_name} #{@search_result.last_name}" %></td>
           <td><%= "#{@search_result.email}"%></td>
-          <td><%= link_to "Add Friend", friendships_path(:friend_id => @search_result), :method => :post %></td>
+          <td><%= link_to "Add Friend", friendships_path(friend_id: @search_result), method: :post %></td>
         </tr>
       </table>
     </div>

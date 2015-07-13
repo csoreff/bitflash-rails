@@ -13,7 +13,7 @@ feature 'user registers', %Q{
   #   If I don't specify the required information, I am presented with
   #   an error message
 
-  scenario 'provide valid registration information', vcr: true do
+  scenario 'provide valid registration information' do
     visit new_user_registration_path
 
     fill_in 'First name', with: 'Bit'

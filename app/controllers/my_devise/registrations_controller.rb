@@ -1,22 +1,43 @@
 class MyDevise::RegistrationsController < Devise::RegistrationsController
+  # class GemUser
+  #   include ActiveModel::ActiveModel
+  #   validates :first_name, presence: true
+  #   validates :last_name, presence: true
+
+  #   def save
+  #     client.authenticate_identify(api_token: ENV['ROUND_API_TOKEN'])
+  #     if user = client.users.find
+  #     else
+  #       client.users.create(first_name: self.first_name, ...)
+  #     end
+  #   end
+  # end
   def create
-    client = Round.client
-    first_name = params[:user][:first_name]
-    last_name = params[:user][:last_name]
-    email = params[:user][:email]
-    password = params[:user][:password]
-    passphrase = params[:user][:passphrase]
-    client.authenticate_identify(api_token: ENV['ROUND_API_TOKEN'])
-    params[:user][:device_token] = client.users.create(
-      first_name: first_name,
-      last_name: last_name,
-      email: email,
-      passphrase: passphrase,
-      device_name: "device",
-      redirect_uri: 'https://bitflash.herokuapp.com'
-    )
-    # Keep original functionality of RegistrationsController, just add to it
-    super unless :device_token.nil?
+    begin
+      client = Round.client
+      if params[:user]
+        first_name = params[:user][:first_name]
+        last_name = params[:user][:last_name]
+        email = params[:user][:email]
+        password = params[:user][:password]
+        passphrase = params[:user][:passphrase]
+      end
+      client.authenticate_identify(api_token: ENV['ROUND_API_TOKEN'])
+      # allow(client.users).to_receive(:create)
+      params[:user][:device_token] = client.users.create(
+        first_name: first_name,
+        last_name: last_name,
+        email: email,
+        passphrase: passphrase,
+        device_name: "device",
+        redirect_uri: 'https://bitflash.herokuapp.com'
+      )
+      # Keep original functionality of RegistrationsController, just add to it
+      super
+    rescue StandardError
+      flash[:warning] = 'You were not registered successfully, please ensure all information is correct and that you have not previously registered with this email.'
+      redirect_to new_user_registration_path
+    end
   end
 
   private
