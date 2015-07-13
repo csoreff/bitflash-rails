@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'vcr'
 
 feature 'user signs in', %Q{
   As a signed up user
