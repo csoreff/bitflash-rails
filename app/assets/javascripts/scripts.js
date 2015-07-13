@@ -12,3 +12,6 @@ function smoothScroll() {
       }
   });
 };
+
+$(document).foundation();
+$(".full-height").height($(".main").parent().height());
