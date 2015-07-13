@@ -1,0 +1,16 @@
+<div class="devise-forms">
+  <%= form_for([@friendship, @transaction]) do |f| %>
+    <% if @transaction.errors.present? %>
+      <div data-alert class="alert-box alert round text-center">
+        <%- @review.errors.full_messages.each do |error| -%>
+          <%= error %><br>
+        <%- end -%>
+      </div>
+    <%- end -%>
+    <p>You are sending money to: <%= @friendship.friend.first_name + " " + @friendship.friend.last_name%></p>
+    <%= f.label :amount %>
+    <%= f.number_field :amount %><br>
+
+    <%= f.submit "Submit", data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</div>

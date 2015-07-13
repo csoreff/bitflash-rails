@@ -16,14 +16,15 @@ class User < ActiveRecord::Base
     client.authenticate_identify(api_token: ENV['ROUND_API_TOKEN'])
     authenticated_user = client.authenticate_device(
       api_token: ENV['ROUND_API_TOKEN'],
-      device_token: current_user.device_token,
-      email: current_user.email
+      device_token: device_token,
+      email: email
     )
     authenticated_user.wallet.accounts['default']
   end
 
   def create_new_address(authenticated_user)
     new_address = authenticated_user.addresses.create
+    addresses.new(btc_addess: new_address)
   end
 
   def make_payment(authenticated_user, password, payee_address, amount)

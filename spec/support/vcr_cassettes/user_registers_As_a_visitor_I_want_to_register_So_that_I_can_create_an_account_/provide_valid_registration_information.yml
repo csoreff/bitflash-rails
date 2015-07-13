@@ -1,0 +1,2908 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.gem.co/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - patchboard-rb v0.1.0
+      Accept:
+      - application/json
+      Host:
+      - api.gem.co
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 13 Jul 2015 17:07:43 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '81092'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "resources": {
+            "service": {
+              "description": "A resource describing the resources and schemas for this API.",
+              "actions": {
+                "documentation": {
+                  "method": "GET",
+                  "response": {
+                    "status": 200
+                  }
+                },
+                "description": {
+                  "method": "GET",
+                  "response": {
+                    "type": "application/json",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "users": {
+              "actions": {
+                "create": {
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.user+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-Identify"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.authorization_request+json;charset=UTF-8;version=2.0",
+                    "status": 201
+                  }
+                }
+              }
+            },
+            "user": {
+              "actions": {
+                "get": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-Application",
+                      "Gem-Device",
+                      "Gem-User-Session",
+                      "Gem-MFA"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.user+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "create_session": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-Identify"
+                    ]
+                  },
+                  "response": {
+                    "status": 204
+                  }
+                },
+                "get_session": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-MFA"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.user+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "update": {
+                  "method": "PATCH",
+                  "request": {
+                    "type": "application/vnd.gem.user_update+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-User-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.user+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "send_mfa": {
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.user_update+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Identify"
+                    ]
+                  },
+                  "response": {
+                    "status": 204
+                  }
+                },
+                "verify_mfa": {
+                  "method": "PUT",
+                  "request": {
+                    "type": "application/vnd.gem.user_update+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Device"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.mfa_verify+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "devices": {
+              "actions": {
+                "list": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.device_list+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "create": {
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.device+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Identify"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.authorization_request+json;charset=UTF-8;version=2.0",
+                    "status": 201
+                  }
+                }
+              }
+            },
+            "device": {
+              "actions": {
+                "get": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Device",
+                      "Gem-MFA"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.device+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "approve": {
+                  "method": "PUT",
+                  "request": {
+                    "type": "application/vnd.gem.device+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-MFA"
+                    ]
+                  },
+                  "response": {
+                    "status": 204
+                  }
+                }
+              }
+            },
+            "developers": {
+              "actions": {
+                "create": {
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.developer+json;charset=UTF-8;version=2.0"
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.developer+json;charset=UTF-8;version=2.0",
+                    "status": 201
+                  }
+                },
+                "get": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-Developer-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.developer+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "developer_salt": {
+              "actions": {
+                "get": {
+                  "method": "GET",
+                  "response": {
+                    "type": "application/vnd.gem.developer_salt+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "developer_session": {
+              "actions": {
+                "create": {
+                  "method": "POST",
+                  "request": {
+                    "authorization": [
+                      "Gem-Password"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.developer+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "destroy": {
+                  "method": "DELETE",
+                  "request": {
+                    "authorization": [
+                      "Gem-Developer-Session"
+                    ]
+                  },
+                  "response": {
+                    "status": 204
+                  }
+                }
+              }
+            },
+            "developer": {
+              "actions": {
+                "get": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-Developer-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.developer+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "update": {
+                  "method": "PUT",
+                  "request": {
+                    "authorization": [
+                      "Gem-Developer-Session"
+                    ],
+                    "type": "application/vnd.gem.developer_update+json;charset=UTF-8;version=2.0"
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.developer+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "send_mfa": {
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.developer_update+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-Identify",
+                      "Gem-Developer-Session"
+                    ]
+                  },
+                  "response": {
+                    "status": 204
+                  }
+                },
+                "confirm_email": {
+                  "method": "PUT",
+                  "request": {
+                    "type": "application/vnd.gem.developer_email_token+json;charset=UTF-8;version=2.0"
+                  },
+                  "response": {
+                    "status": 200,
+                    "type": "application/vnd.gem.developer+json;charset=UTF-8;version=2.0"
+                  }
+                }
+              }
+            },
+            "applications": {
+              "actions": {
+                "create": {
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.application+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-Developer-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.application+json;charset=UTF-8;version=2.0",
+                    "status": 201
+                  }
+                },
+                "list": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Developer-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.application_list+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "get": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-Application",
+                      "Gem-Identify"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.application+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "application": {
+              "actions": {
+                "undelivered": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.gem_address_notification_list+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "update": {
+                  "method": "PATCH",
+                  "request": {
+                    "type": "application/vnd.gem.application+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-Developer-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.application+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "reset": {
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.application_reset+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-Developer-Session",
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.application+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "get": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-Application",
+                      "Gem-Device",
+                      "Gem-Developer-Session",
+                      "Gem-MFA"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.application+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "authorize_instance": {
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.application_instance+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-Developer-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.application_instance+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "application_instance": {
+              "actions": {
+                "get": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-Developer-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.application_instance+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "delete": {
+                  "method": "DELETE",
+                  "request": {
+                    "authorization": [
+                      "Gem-Developer-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.application_instance+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "application_instances": {
+              "actions": {
+                "list": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-Developer-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.application_instance_list+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "create": {
+                  "method": "POST",
+                  "request": {
+                    "authorization": [
+                      "Gem-Developer-Session"
+                    ],
+                    "type": "application/vnd.gem.application_instance+json;charset=UTF-8;version=2.0"
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.application_instance+json;charset=UTF-8;version=2.0",
+                    "status": 201
+                  }
+                }
+              }
+            },
+            "application_users": {
+              "actions": {
+                "create": {
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.user+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.user+json;charset=UTF-8;version=2.0",
+                    "status": 201
+                  }
+                },
+                "list": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.user_list+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "rules": {
+              "actions": {
+                "get": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.rules+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "add": {
+                  "method": "POST",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session"
+                    ],
+                    "type": "application/vnd.gem.rule_add+json;charset=UTF-8;version=2.0"
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.rule+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "rule": {
+              "actions": {
+                "delete": {
+                  "method": "DELETE",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.deleted_rule+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "wallets": {
+              "description": "The collection of wallets belonging to a user.  Gem wallets\ncombine three deterministic trees to provide the co-signing security\nfeature.  The primary and backup trees are owned by the user while the\ncosigner tree is owned by Gem.\n\n\"Owned\" here means \"knows the root seed\".  The root public\nkeys for all three trees are, of course, public.  The root seed\nfor the backup tree should be stored offline.\n",
+              "actions": {
+                "create": {
+                  "description": "Create a new wallet for a user.",
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.wallet+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.wallet+json;charset=UTF-8;version=2.0",
+                    "status": 201
+                  }
+                },
+                "list": {
+                  "description": "List wallets belonging to a user.",
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Device",
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.wallet_list+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "application_wallets": {
+              "actions": {
+                "create": {
+                  "description": "Create a new wallet for an application.",
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.wallet+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-Developer-Session",
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.wallet+json;charset=UTF-8;version=2.0",
+                    "status": 201
+                  }
+                },
+                "list": {
+                  "description": "List wallets belonging to an application.",
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-Developer-Session",
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.wallet_list+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "wallet": {
+              "actions": {
+                "get": {
+                  "description": "Retrieve a wallet.  The response contains public seeds for all\nthree trees, as well as an encrypted form of the private seed for\nthe primary tree.  Provided with the correct passphrase, clients\ncan decrypt the primary seed for use in signing transactions.  The\nclient can use the public seeds to verify the correctness of the\nBitcoin addresses generated by the server.",
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Developer-Session",
+                      "Gem-Application",
+                      "Gem-Device"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.wallet+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "update": {
+                  "description": "Update a wallet with params. Return the wallet.",
+                  "method": "PATCH",
+                  "request": {
+                    "type": "application/vnd.gem.wallet+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.wallet+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "accounts": {
+              "description": "",
+              "actions": {
+                "create": {
+                  "description": "Create a new account within a wallet",
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.account_create+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Application",
+                      "Gem-Device"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.account+json;charset=UTF-8;version=2.0",
+                    "status": 201
+                  }
+                },
+                "list": {
+                  "description": "List the accounts belonging to a wallet",
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Application",
+                      "Gem-Device"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.account_list+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "account": {
+              "actions": {
+                "get": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Developer-Session",
+                      "Gem-Device",
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.account+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "update": {
+                  "method": "PUT",
+                  "request": {
+                    "type": "application/vnd.gem.account_create+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Developer-Session",
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.account+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "addresses": {
+              "actions": {
+                "create": {
+                  "method": "POST",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Developer-Session",
+                      "Gem-Device",
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.address+json;charset=UTF-8;version=2.0",
+                    "status": 201
+                  }
+                },
+                "list": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Developer-Session",
+                      "Gem-Device",
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.address_list+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "subscriptions": {
+              "actions": {
+                "create": {
+                  "method": "POST",
+                  "request": {
+                    "authorization": [
+                      "Gem-Developer-Session",
+                      "Gem-Application"
+                    ],
+                    "type": "application/vnd.gem.subscription+json;charset=UTF-8;version=2.0"
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.subscription+json;charset=UTF-8;version=2.0",
+                    "status": 201
+                  }
+                },
+                "list": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-Developer-Session",
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.subscription_list+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "subscription": {
+              "actions": {
+                "get": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-Developer-Session",
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.subscription+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "delete": {
+                  "method": "DELETE",
+                  "request": {
+                    "authorization": [
+                      "Gem-Developer-Session",
+                      "Gem-Application"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.subscription+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "notifications": {
+              "actions": {
+                "receive_address": {
+                  "method": "POST",
+                  "request": {
+                    "mediaType": "application/vnd.gem.chain_address_notification+json;charset=UTF-8;version=2.0"
+                  },
+                  "response": {
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "transactions": {
+              "actions": {
+                "list": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Developer-Session",
+                      "Gem-Application",
+                      "Gem-Device"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.transaction_list+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "create": {
+                  "description": "Prepare a Bitcoin transaction for signing.",
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.transaction+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Application",
+                      "Gem-Device"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.transaction+json;charset=UTF-8;version=2.0",
+                    "status": 201
+                  }
+                },
+                "query": {
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.transaction_query+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Developer-Session",
+                      "Gem-Application",
+                      "Gem-Device"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.transaction_list+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "transaction": {
+              "actions": {
+                "get": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Application",
+                      "Gem-Device",
+                      "Gem-MFA"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.transaction+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "cancel": {
+                  "method": "DELETE",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Application",
+                      "Gem-Device",
+                      "Gem-MFA"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.transaction+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "update": {
+                  "description": "Supply client-side signatures for the Transaction.",
+                  "method": "POST",
+                  "request": {
+                    "type": "application/vnd.gem.transaction+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Application",
+                      "Gem-Device"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.transaction+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "approve": {
+                  "description": "Authorize a pending Transaction with a MFA token.",
+                  "method": "PUT",
+                  "request": {
+                    "type": "application/vnd.gem.transaction+json;charset=UTF-8;version=2.0",
+                    "authorization": [
+                      "Gem-Application",
+                      "Gem-MFA"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.transaction+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "wallet_transactions": {
+              "description": "A combined list of all transactions and receipts.",
+              "actions": {
+                "list": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session",
+                      "Gem-Application",
+                      "Gem-Device"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.transaction_list+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "authorization_requests": {
+              "actions": {
+                "list": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-User-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.authorization_request_list+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            },
+            "authorization_request": {
+              "description": "Container resource for protected actions requiring multi-factor authentication.",
+              "actions": {
+                "get": {
+                  "method": "GET",
+                  "request": {
+                    "authorization": [
+                      "Gem-Identify",
+                      "Gem-User-Session"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.authorization_request+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "approve": {
+                  "method": "PUT",
+                  "request": {
+                    "authorization": [
+                      "Gem-MFA"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.authorization_request+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                },
+                "deny": {
+                  "method": "DELETE",
+                  "request": {
+                    "authorization": [
+                      "Gem-MFA"
+                    ]
+                  },
+                  "response": {
+                    "type": "application/vnd.gem.authorization_request+json;charset=UTF-8;version=2.0",
+                    "status": 200
+                  }
+                }
+              }
+            }
+          },
+          "schemas": [
+            {
+              "id": "urn:patchboard",
+              "definitions": {
+                "resource": {
+                  "id": "#resource",
+                  "type": "object",
+                  "properties": {
+                    "url": {
+                      "type": "string",
+                      "format": "uri",
+                      "readonly": true
+                    }
+                  }
+                },
+                "service": {
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "id": "#service"
+                },
+                "description": {
+                  "id": "#description",
+                  "type": "object",
+                  "properties": {
+                    "schema": {
+                      "type": "object"
+                    },
+                    "resources": {
+                      "type": "object"
+                    },
+                    "directory": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "urn:gem.co",
+              "definitions": {
+                "uri": {
+                  "description": "A valid URI.",
+                  "type": "string",
+                  "pattern": "^[+-._a-zA-Z0-9/=\\s\\S]{2,10}://[+-._a-zA-Z0-9/=\\s\\S]{4,250}$",
+                  "minLength": 4,
+                  "maxLength": 250,
+                  "id": "#uri"
+                },
+                "base58": {
+                  "description": "A value encoded as base58.",
+                  "type": "string",
+                  "pattern": "^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]+$",
+                  "id": "#base58"
+                },
+                "hex": {
+                  "description": "A value encoded as hexadecimal.",
+                  "type": "string",
+                  "pattern": "^[0123456789A-Fa-f]+$",
+                  "id": "#hex"
+                },
+                "wallet_path": {
+                  "description": "The string representation of a path in a wallet tree.",
+                  "type": "string",
+                  "pattern": "^[mM](/d)+$",
+                  "minLength": 1,
+                  "maxLength": 25,
+                  "id": "#wallet_path"
+                },
+                "public_key": {
+                  "description": "A PEM-encoded RSA public key.",
+                  "type": "string",
+                  "pattern": "^[+-._a-zA-Z0-9/=\\s\\S]{128,4097}$",
+                  "minLength": 128,
+                  "maxLength": 4097,
+                  "id": "#public_key"
+                },
+                "token": {
+                  "description": "Server-generated tokens (api_token, user_token, otp_secret, etc)",
+                  "type": "string",
+                  "pattern": "^[+-._a-zA-z0-9]{40,50}$",
+                  "minLength": 40,
+                  "maxLength": 50,
+                  "id": "#token"
+                },
+                "totp_secret": {
+                  "description": "16-character base32 TOTP secret key.",
+                  "type": "string",
+                  "minLength": 16,
+                  "maxLength": 16,
+                  "id": "#totp_secret"
+                },
+                "mfa_token": {
+                  "type": "string",
+                  "pattern": "^[0-9\\s]{6,10}$",
+                  "minLength": 6,
+                  "maxLength": 10,
+                  "id": "#mfa_token"
+                },
+                "resname": {
+                  "description": "User-generated resource name. 3-64 characters.",
+                  "type": "string",
+                  "pattern": "^[+-._a-zA-z0-9\\s]{3,64}$",
+                  "minLength": 3,
+                  "maxLength": 64,
+                  "id": "#resname"
+                },
+                "phone_number": {
+                  "description": "e164 formatted phone number.",
+                  "type": "string",
+                  "pattern": "^[+0-9]{10,30}$",
+                  "minLength": 10,
+                  "maxLength": 30,
+                  "id": "#phone_number"
+                },
+                "country_code": {
+                  "description": "2-character country code. 'US', 'GB', etc.",
+                  "type": "string",
+                  "pattern": "^[a-zA-Z]$",
+                  "minLength": 2,
+                  "maxLength": 2,
+                  "id": "#country_code"
+                },
+                "human_name": {
+                  "description": "Person/organization name. 2 - 100 characters.",
+                  "type": "string",
+                  "pattern": "^[+-._a-zA-z0-9\\s]{2,100}$",
+                  "minLength": 2,
+                  "maxLength": 100,
+                  "id": "#human_name"
+                },
+                "timestamp": {
+                  "description": "A unix timestamp.",
+                  "type": "integer",
+                  "format": "utc-millisec",
+                  "minimum": 1409529599,
+                  "id": "#timestamp"
+                },
+                "tx_hash": {
+                  "description": "A bitcoin transaction hash.",
+                  "type": "string",
+                  "pattern": "^[0-9a-fA-F]{64}$",
+                  "minLength": 64,
+                  "maxLength": 64,
+                  "id": "#tx_hash"
+                },
+                "btcaddr": {
+                  "description": "A bitcoin address.",
+                  "type": "string",
+                  "pattern": "^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]+$",
+                  "minLength": 27,
+                  "maxLength": 36,
+                  "id": "#btcaddr"
+                },
+                "serializedaddr": {
+                  "description": "A PUBLIC bip32-serialized bitcoin address.",
+                  "type": "string",
+                  "pattern": "^(xpub|tpub)[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{80,108}$",
+                  "maxLength": 112,
+                  "id": "#serializedaddr"
+                },
+                "users": {
+                  "mediaType": "application/vnd.gem.users+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "id": "#users"
+                },
+                "application_users": {
+                  "mediaType": "application/vnd.gem.users+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "id": "#application_users"
+                },
+                "user_list": {
+                  "mediaType": "application/vnd.gem.user_list+json;charset=UTF-8;version=2.0",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#user"
+                  },
+                  "id": "#user_list"
+                },
+                "user": {
+                  "mediaType": "application/vnd.gem.user+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "additionalProperties": false,
+                  "properties": {
+                    "email": {
+                      "required": true,
+                      "type": "string",
+                      "minLength": 5,
+                      "maxLength": 100,
+                      "format": "email"
+                    },
+                    "first_name": {
+                      "extends": {
+                        "$ref": "#human_name"
+                      }
+                    },
+                    "last_name": {
+                      "extends": {
+                        "$ref": "#human_name"
+                      }
+                    },
+                    "user_token": {
+                      "extends": {
+                        "$ref": "#token"
+                      }
+                    },
+                    "phone_number": {
+                      "extends": {
+                        "$ref": "#phone_number"
+                      }
+                    },
+                    "country_code": {
+                      "extends": {
+                        "$ref": "#country_code"
+                      }
+                    },
+                    "totp_secret": {
+                      "extends": {
+                        "$ref": "#totp_secret"
+                      }
+                    },
+                    "session_token": {
+                      "extends": {
+                        "$ref": "#token"
+                      }
+                    },
+                    "device_name": {
+                      "extends": {
+                        "$ref": "#resname"
+                      }
+                    },
+                    "redirect_uri": {
+                      "extends": {
+                        "$ref": "#uri"
+                      }
+                    },
+                    "created_at": {
+                      "extends": {
+                        "$ref": "#timestamp"
+                      }
+                    },
+                    "updated_at": {
+                      "extends": {
+                        "$ref": "#timestamp"
+                      }
+                    },
+                    "applications": {
+                      "$ref": "#applications"
+                    },
+                    "devices": {
+                      "$ref": "#devices"
+                    },
+                    "default_wallet": {
+                      "$ref": "#wallet"
+                    },
+                    "subscriptions": {
+                      "$ref": "#subscriptions"
+                    },
+                    "authorization_requests": {
+                      "$ref": "#authorization_requests"
+                    }
+                  },
+                  "id": "#user"
+                },
+                "user_update": {
+                  "mediaType": "application/vnd.gem.user_update+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "additionalProperties": false,
+                  "properties": {
+                    "phone_number": {
+                      "extends": {
+                        "$ref": "#phone_number"
+                      }
+                    },
+                    "first_name": {
+                      "extends": {
+                        "$ref": "#human_name"
+                      }
+                    },
+                    "last_name": {
+                      "extends": {
+                        "$ref": "#human_name"
+                      }
+                    },
+                    "totp_secret": {
+                      "extends": {
+                        "$ref": "#totp_secret"
+                      }
+                    },
+                    "mfa_token": {
+                      "extends": {
+                        "$ref": "#mfa_token"
+                      }
+                    },
+                    "backup_public_seed": {
+                      "description": "The serialized public address for the backup tree of a multi-sig HD wallet.",
+                      "extends": {
+                        "$ref": "#serializedaddr"
+                      }
+                    }
+                  },
+                  "id": "#user_update"
+                },
+                "mfa_verify": {
+                  "mediaType": "application/vnd.gem.mfa_verify+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "type": "object",
+                  "properties": {
+                    "valid": {
+                      "type": "boolean"
+                    }
+                  },
+                  "id": "#mfa_verify"
+                },
+                "devices": {
+                  "mediaType": "application/vnd.gem.devices+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "id": "#devices"
+                },
+                "device_list": {
+                  "mediaType": "application/vnd.gem.device_list+json;charset=UTF-8;version=2.0",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#device"
+                  },
+                  "id": "#device_list"
+                },
+                "device": {
+                  "mediaType": "application/vnd.gem.device+json;charset=UTF-8;version=2.0",
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "required": true,
+                      "extends": {
+                        "$ref": "#resname"
+                      }
+                    },
+                    "device_token": {
+                      "extends": {
+                        "$ref": "#token"
+                      }
+                    },
+                    "redirect_uri": {
+                      "extends": {
+                        "$ref": "#uri"
+                      }
+                    }
+                  },
+                  "id": "#device"
+                },
+                "developer": {
+                  "mediaType": "application/vnd.gem.developer+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "additionalProperties": false,
+                  "properties": {
+                    "email": {
+                      "required": true,
+                      "type": "string",
+                      "minLength": 5,
+                      "maxLength": 100,
+                      "format": "email"
+                    },
+                    "session_token": {
+                      "extends": {
+                        "$ref": "#token"
+                      }
+                    },
+                    "first_name": {
+                      "required": true,
+                      "extends": {
+                        "$ref": "#human_name"
+                      }
+                    },
+                    "last_name": {
+                      "required": true,
+                      "extends": {
+                        "$ref": "#human_name"
+                      }
+                    },
+                    "organization": {
+                      "extends": {
+                        "$ref": "#human_name"
+                      }
+                    },
+                    "phone_number": {
+                      "extends": {
+                        "$ref": "#phone_number"
+                      }
+                    },
+                    "country_code": {
+                      "extends": {
+                        "$ref": "#country_code"
+                      }
+                    },
+                    "password_hash": {
+                      "extends": {
+                        "$ref": "#hex"
+                      },
+                      "minLength": 64,
+                      "maxLength": 64,
+                      "required": true
+                    },
+                    "client_salt": {
+                      "extends": {
+                        "$ref": "#hex"
+                      },
+                      "minLength": 32,
+                      "maxLength": 32,
+                      "required": true
+                    },
+                    "clients": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "ruby",
+                          "python",
+                          "java",
+                          "node",
+                          "obj-c"
+                        ]
+                      }
+                    },
+                    "confirmed": {
+                      "type": "boolean"
+                    },
+                    "created_at": {
+                      "extends": {
+                        "$ref": "#timestamp"
+                      }
+                    },
+                    "updated_at": {
+                      "extends": {
+                        "$ref": "#timestamp"
+                      }
+                    },
+                    "applications": {
+                      "$ref": "#applications"
+                    },
+                    "session": {
+                      "$ref": "#developer_session"
+                    }
+                  },
+                  "id": "#developer"
+                },
+                "developer_salt": {
+                  "mediaType": "application/vnd.gem.developer_salt+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "additionalProperties": false,
+                  "properties": {
+                    "salt": {
+                      "type": "string"
+                    },
+                    "developer": {
+                      "$ref": "#developer"
+                    }
+                  },
+                  "id": "#developer_salt"
+                },
+                "developer_session": {
+                  "mediaType": "application/vnd.gem.developer_session+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "additionalProperties": false,
+                  "properties": {
+                    "token": {
+                      "type": "string"
+                    }
+                  },
+                  "id": "#developer_session"
+                },
+                "developer_email_token": {
+                  "mediaType": "application/vnd.gem.developer_email_token+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "additionalProperties": false,
+                  "properties": {
+                    "token": {
+                      "type": "string"
+                    }
+                  },
+                  "id": "#developer_email_token"
+                },
+                "developer_update": {
+                  "mediaType": "application/vnd.gem.developer_update+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "additionalProperties": false,
+                  "properties": {
+                    "phone_number": {
+                      "extends": {
+                        "$ref": "#phone_number"
+                      }
+                    },
+                    "first_name": {
+                      "extends": {
+                        "$ref": "#human_name"
+                      }
+                    },
+                    "last_name": {
+                      "extends": {
+                        "$ref": "#human_name"
+                      }
+                    },
+                    "totp_secret": {
+                      "extends": {
+                        "$ref": "#totp_secret"
+                      }
+                    },
+                    "password_hash": {
+                      "extends": {
+                        "$ref": "#hex"
+                      },
+                      "minLength": 64,
+                      "maxLength": 64
+                    },
+                    "client_salt": {
+                      "extends": {
+                        "$ref": "#hex"
+                      },
+                      "minLength": 32,
+                      "maxLength": 32
+                    }
+                  },
+                  "id": "#developer_update"
+                },
+                "applications": {
+                  "mediaType": "application/vnd.gem.applications+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "id": "#applications"
+                },
+                "application_list": {
+                  "mediaType": "application/vnd.gem.application_list+json;charset=UTF-8;version=2.0",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#application"
+                  },
+                  "id": "#application_list"
+                },
+                "application": {
+                  "mediaType": "application/vnd.gem.application+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "additionalProperties": false,
+                  "properties": {
+                    "name": {
+                      "required": true,
+                      "type": "string",
+                      "extends": {
+                        "$ref": "#resname"
+                      }
+                    },
+                    "api_token": {
+                      "description": "Token used to authenticate API requests.",
+                      "type": "string",
+                      "extends": {
+                        "$ref": "#token"
+                      }
+                    },
+                    "created_at": {
+                      "extends": {
+                        "$ref": "#timestamp"
+                      }
+                    },
+                    "updated_at": {
+                      "extends": {
+                        "$ref": "#timestamp"
+                      }
+                    },
+                    "subscription_token": {
+                      "description": "Secret token used with sending POSTS to client server.",
+                      "maxLength": 150,
+                      "type": "string"
+                    },
+                    "totp_secret": {
+                      "extends": {
+                        "$ref": "#totp_secret"
+                      }
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "production",
+                        "test"
+                      ]
+                    },
+                    "rules": {
+                      "$ref": "#rules"
+                    },
+                    "users": {
+                      "$ref": "#application_users"
+                    },
+                    "subscriptions": {
+                      "$ref": "#subscriptions"
+                    },
+                    "wallets": {
+                      "$ref": "#application_wallets"
+                    },
+                    "instances": {
+                      "$ref": "#application_instances"
+                    },
+                    "authorization_requests": {
+                      "$ref": "#authorization_requests"
+                    }
+                  },
+                  "id": "#application"
+                },
+                "application_reset": {
+                  "mediaType": "application/vnd.gem.application_reset+json;charset=UTF-8;version=2.0",
+                  "additionalProperties": false,
+                  "type": "array",
+                  "items": {
+                    "$ref": "#reset_tokens"
+                  },
+                  "id": "#application_reset"
+                },
+                "reset_tokens": {
+                  "mediaType": "application/vnd.gem.reset_tokens+json;charset=UTF-8;version=2.0",
+                  "additionalProperties": false,
+                  "type": "string",
+                  "enum": [
+                    "api_token",
+                    "subscription_token",
+                    "totp_secret"
+                  ],
+                  "required": true,
+                  "id": "#reset_tokens"
+                },
+                "application_instances": {
+                  "mediaType": "application/vnd.gem.application_instances+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "id": "#application_instances"
+                },
+                "application_instance": {
+                  "mediaType": "application/vnd.gem.application_instance+json;charset=UTF-8;version=2.0",
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "extends": {
+                        "$ref": "#resname"
+                      },
+                      "required": true
+                    },
+                    "admin_token": {
+                      "type": "string",
+                      "extends": {
+                        "$ref": "#token"
+                      }
+                    }
+                  },
+                  "id": "#application_instance"
+                },
+                "application_instance_list": {
+                  "mediaType": "application/vnd.gem.application_instance_list+json;charset=UTF-8;version=2.0",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#application_instance"
+                  },
+                  "id": "#application_instance_list"
+                },
+                "wallets": {
+                  "mediaType": "application/vnd.gem.wallets+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "id": "#wallets"
+                },
+                "application_wallets": {
+                  "mediaType": "application/vnd.gem.wallets+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "id": "#application_wallets"
+                },
+                "wallet_list": {
+                  "description": "A list of named wallets.",
+                  "mediaType": "application/vnd.gem.wallet_list+json;charset=UTF-8;version=2.0",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#wallet"
+                  },
+                  "id": "#wallet_list"
+                },
+                "wallet": {
+                  "description": "A wallet contains an arbitrary number of accounts used for\nperforming Bitcoin transactions.",
+                  "mediaType": "application/vnd.gem.wallet+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "additionalProperties": false,
+                  "properties": {
+                    "name": {
+                      "required": true,
+                      "extends": {
+                        "$ref": "#resname"
+                      }
+                    },
+                    "cosigner_public_seed": {
+                      "description": "The serialized public address for the master node of the cosigning tree\nof a multi-sig HD wallet. This is generated by Gem.",
+                      "extends": {
+                        "$ref": "#serializedaddr"
+                      }
+                    },
+                    "backup_public_seed": {
+                      "description": "The serialized public address for the master node of the backup tree of\na multi-sig HD wallet. This is generated by the end-user and delivered\nout-of-band directly to Gem.",
+                      "extends": {
+                        "$ref": "#serializedaddr"
+                      }
+                    },
+                    "primary_public_seed": {
+                      "description": "The serialized public address for the master node of the primary tree\nof a multi-sig HD wallet. This is generated by the client application\nand included in wallets.create.",
+                      "extends": {
+                        "$ref": "#serializedaddr"
+                      }
+                    },
+                    "primary_private_seed": {
+                      "description": "Encrypted form of the seed (not master node) used to store the wallet's\nprimary tree.",
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "salt": {
+                          "extends": {
+                            "$ref": "#hex"
+                          },
+                          "maxLength": 35
+                        },
+                        "iterations": {
+                          "type": "integer",
+                          "minimum": 1000,
+                          "maximum": 1000000
+                        },
+                        "nonce": {
+                          "extends": {
+                            "$ref": "#hex"
+                          },
+                          "maxLength": 50
+                        },
+                        "ciphertext": {
+                          "extends": {
+                            "$ref": "#hex"
+                          },
+                          "maxLength": 2048
+                        }
+                      }
+                    },
+                    "created_at": {
+                      "extends": {
+                        "$ref": "#timestamp"
+                      }
+                    },
+                    "updated_at": {
+                      "extends": {
+                        "$ref": "#timestamp"
+                      }
+                    },
+                    "rules": {
+                      "$ref": "#rules"
+                    },
+                    "accounts": {
+                      "$ref": "#accounts"
+                    },
+                    "default_account": {
+                      "$ref": "#account"
+                    },
+                    "subscriptions": {
+                      "$ref": "#subscriptions"
+                    },
+                    "transactions": {
+                      "$ref": "#transactions"
+                    }
+                  },
+                  "id": "#wallet"
+                },
+                "accounts": {
+                  "mediaType": "application/vnd.gem.accounts+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "id": "#accounts"
+                },
+                "account_list": {
+                  "description": "A list of named accounts, each corresponding to an HD wallet account as per: m/44/0/[X]/0/0",
+                  "mediaType": "application/vnd.gem.account_list+json;charset=UTF-8;version=2.0",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#account"
+                  },
+                  "id": "#account_list"
+                },
+                "account_create": {
+                  "mediaType": "application/vnd.gem.account_create+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "additionalProperties": false,
+                  "properties": {
+                    "name": {
+                      "extends": {
+                        "$ref": "#resname"
+                      }
+                    },
+                    "network": {
+                      "type": "string",
+                      "enum": [
+                        "bitcoin",
+                        "bitcoin_testnet",
+                        "litecoin",
+                        "dogecoin"
+                      ]
+                    }
+                  },
+                  "id": "#account_create"
+                },
+                "account": {
+                  "mediaType": "application/vnd.gem.account+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "additionalProperties": false,
+                  "properties": {
+                    "name": {
+                      "extends": {
+                        "$ref": "#resname"
+                      }
+                    },
+                    "path": {
+                      "extends": {
+                        "$ref": "#wallet_path"
+                      }
+                    },
+                    "balance": {
+                      "type": "integer"
+                    },
+                    "pending_balance": {
+                      "type": "integer"
+                    },
+                    "network": {
+                      "type": "string",
+                      "enum": [
+                        "bitcoin",
+                        "bitcoin_testnet",
+                        "litecoin",
+                        "dogecoin"
+                      ]
+                    },
+                    "available_balance": {
+                      "type": "integer"
+                    },
+                    "created_at": {
+                      "extends": {
+                        "$ref": "#timestamp"
+                      }
+                    },
+                    "updated_at": {
+                      "extends": {
+                        "$ref": "#timestamp"
+                      }
+                    },
+                    "rules": {
+                      "$ref": "#rules"
+                    },
+                    "addresses": {
+                      "$ref": "#addresses"
+                    },
+                    "transactions": {
+                      "$ref": "#transactions"
+                    },
+                    "subscriptions": {
+                      "$ref": "#subscriptions"
+                    }
+                  },
+                  "id": "#account"
+                },
+                "addresses": {
+                  "mediaType": "application/vnd.gem.addresses+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "id": "#addresses"
+                },
+                "address_list": {
+                  "mediaType": "application/vnd.gem.address_list+json;charset=UTF-8;version=2.0",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#address"
+                  },
+                  "id": "#address_list"
+                },
+                "address": {
+                  "mediaType": "application/vnd.gem.address+json;charset=UTF-8;version=2.0",
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "extends": {
+                        "$ref": "#wallet_path"
+                      }
+                    },
+                    "string": {
+                      "extends": {
+                        "$ref": "#btcaddr"
+                      }
+                    },
+                    "created_at": {
+                      "extends": {
+                        "$ref": "#timestamp"
+                      }
+                    }
+                  },
+                  "id": "#address"
+                },
+                "subscriptions": {
+                  "mediaType": "application/vnd.gem.subscriptions+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "id": "#subscriptions"
+                },
+                "transactions": {
+                  "mediaType": "application/vnd.gem.transactions+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "id": "#transactions"
+                },
+                "transaction_query": {
+                  "mediaType": "application/vnd.gem.transaction_query+json;charset=UTF-8;version=2.0",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "transaction_hashes": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#tx_hash"
+                      }
+                    },
+                    "context_address": {
+                      "type": "string",
+                      "extends": {
+                        "$ref": "#btcaddr"
+                      }
+                    }
+                  },
+                  "id": "#transaction_query"
+                },
+                "transaction_list": {
+                  "mediaType": "application/vnd.gem.transaction_list+json;charset=UTF-8;version=2.0",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#transaction"
+                  },
+                  "id": "#transaction_list"
+                },
+                "transaction": {
+                  "mediaType": "application/vnd.gem.transaction+json;charset=UTF-8;version=2.0",
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#bitcoin_transaction"
+                    },
+                    "hash": {
+                      "$ref": "#tx_hash"
+                    },
+                    "utxo_confirmations": {
+                      "description": "Overrides the required confirmations for the UTXO selection.",
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "fee": {
+                      "description": "Transaction fee (in satoshis)",
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 1000000000
+                    },
+                    "payees": {
+                      "description": "A list of the output addresses",
+                      "type": "array",
+                      "items": {
+                        "$ref": "#payee_output"
+                      }
+                    },
+                    "signatures": {
+                      "description": "A collection of inputs with signatures.",
+                      "extends": {
+                        "$ref": "#transaction_signatures"
+                      }
+                    },
+                    "confirmations": {
+                      "description": "Current confirmations",
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "incoming",
+                        "outgoing"
+                      ]
+                    },
+                    "redirect_uri": {
+                      "extends": {
+                        "$ref": "#uri"
+                      }
+                    },
+                    "mfa_uri": {
+                      "extends": {
+                        "$ref": "#uri"
+                      }
+                    },
+                    "created_at": {
+                      "extends": {
+                        "$ref": "#timestamp"
+                      }
+                    },
+                    "network": {
+                      "enum": [
+                        "bitcoin",
+                        "bitcoin_testnet",
+                        "litecoin",
+                        "dogecoin"
+                      ]
+                    },
+                    "destination_addresses": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#serializedaddr"
+                      }
+                    },
+                    "application": {
+                      "$ref": "#application"
+                    }
+                  },
+                  "id": "#transaction"
+                },
+                "payee_output": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "amount": {
+                      "required": true,
+                      "type": "integer",
+                      "minimum": 5430,
+                      "maximum": 2100000000000000
+                    },
+                    "address": {
+                      "required": true,
+                      "extends": {
+                        "$ref": "#btcaddr"
+                      }
+                    }
+                  },
+                  "id": "#payee_output"
+                },
+                "transaction_signatures": {
+                  "mediaType": "application/vnd.gem.transaction_signatures+json;charset=UTF-8;version=2.0",
+                  "type": "object",
+                  "properties": {
+                    "transaction_hash": {
+                      "required": true,
+                      "extends": {
+                        "$ref": "#hex"
+                      },
+                      "maxLength": 64,
+                      "minLength": 64
+                    },
+                    "inputs": {
+                      "required": true,
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 3000,
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "extends": {
+                            "$ref": "#base58"
+                          },
+                          "minlength": 142,
+                          "maxLength": 144
+                        }
+                      }
+                    }
+                  },
+                  "id": "#transaction_signatures"
+                },
+                "bitcoin_transaction": {
+                  "mediaType": "application/vnd.gem.bitcoin_transaction+json;charset=UTF-8;version=2.0",
+                  "properties": {
+                    "version": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 1
+                    },
+                    "lock_time": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "unsigned",
+                        "unconfirmed",
+                        "confirmed",
+                        "invalid",
+                        "unapproved",
+                        "approved",
+                        "canceled"
+                      ]
+                    },
+                    "hash": {
+                      "extends": {
+                        "$ref": "#hex"
+                      }
+                    },
+                    "inputs": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#input"
+                      },
+                      "minItems": 1,
+                      "maxItems": 3000
+                    },
+                    "outputs": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#output"
+                      },
+                      "minItems": 1,
+                      "maxItems": 3000
+                    }
+                  },
+                  "id": "#bitcoin_transaction"
+                },
+                "input": {
+                  "type": "object",
+                  "properties": {
+                    "output": {
+                      "$ref": "#output"
+                    },
+                    "sig_hash": {
+                      "description": "Base58 encoding of hash160 of a document composed of this input's\npayload and all the output payloads.  Provided to the client for\nerror checking, as most users will wish to compute their own\ndocuments for signing.",
+                      "extends": {
+                        "$ref": "#hex"
+                      },
+                      "minLength": 64,
+                      "maxLength": 64
+                    },
+                    "signatures": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "extends": {
+                          "$ref": "#hex"
+                        },
+                        "minlength": 142,
+                        "maxLength": 144
+                      }
+                    },
+                    "script_sig": {
+                      "extends": {
+                        "$ref": "#hex"
+                      },
+                      "maxLength": 1650
+                    }
+                  },
+                  "id": "#input"
+                },
+                "output": {
+                  "type": "object",
+                  "properties": {
+                    "transaction_hash": {
+                      "description": "The hash value used to identify the output's transaction",
+                      "extends": {
+                        "$ref": "#base58"
+                      },
+                      "maxLength": 64,
+                      "minLength": 64
+                    },
+                    "index": {
+                      "description": "The index of this output in its transaction.",
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "value": {
+                      "description": "The value of the output in Satoshis",
+                      "type": "integer",
+                      "minimum": 5430
+                    },
+                    "metadata": {
+                      "description": "A place to store free-form metadata, such as a deterministic\nwallet path",
+                      "type": "object"
+                    },
+                    "script": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "address",
+                            "p2sh"
+                          ]
+                        },
+                        "string": {
+                          "description": "The unencoded redemption script for this output",
+                          "type": "string",
+                          "maxLength": 520
+                        }
+                      }
+                    }
+                  },
+                  "id": "#output"
+                },
+                "rules": {
+                  "mediaType": "application/vnd.gem.rules+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "properties": {
+                    "active": {
+                      "additionalProperties": {
+                        "$ref": "#rule"
+                      }
+                    }
+                  },
+                  "id": "#rules"
+                },
+                "rule_add": {
+                  "mediaType": "application/vnd.gem.rule_add+json;charset=UTF-8;version=2.0",
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "definition": {
+                      "type": "object"
+                    }
+                  },
+                  "id": "#rule_add"
+                },
+                "rule": {
+                  "mediaType": "application/vnd.gem.rule+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object"
+                    }
+                  },
+                  "id": "#rule"
+                },
+                "deleted_rule": {
+                  "mediaType": "application/vnd.gem.deleted_rule+json;charset=UTF-8;version=2.0",
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object"
+                    }
+                  },
+                  "id": "#deleted_rule"
+                },
+                "subscription_list": {
+                  "mediaType": "application/vnd.gem.subscription_list+json;charset=UTF-8;version=2.0",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#subscription"
+                  },
+                  "id": "#subscription_list"
+                },
+                "subscription": {
+                  "mediaType": "application/vnd.gem.subscription+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "properties": {
+                    "scope": {
+                      "type": "string"
+                    },
+                    "scope_key": {
+                      "type": "string"
+                    },
+                    "subscribed_to": {
+                      "type": "string",
+                      "enum": [
+                        "account"
+                      ],
+                      "required": true
+                    },
+                    "callback_url": {
+                      "type": "string",
+                      "maxLength": 500,
+                      "required": true
+                    }
+                  },
+                  "id": "#subscription"
+                },
+                "notifications": {
+                  "mediaType": "application/vnd.gem.notifications+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "id": "#notifications"
+                },
+                "chain_address_notification": {
+                  "mediaType": "application/vnd.gem.chain_address_notification+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "properties": {
+                    "id": {
+                      "required": true,
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "required": true,
+                      "type": "string"
+                    },
+                    "delivery_attempt": {
+                      "required": true,
+                      "type": "integer"
+                    },
+                    "notification_id": {
+                      "required": true,
+                      "type": "string"
+                    },
+                    "payload": {
+                      "required": true,
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "required": true,
+                          "type": "string"
+                        },
+                        "address": {
+                          "required": true,
+                          "type": "string"
+                        },
+                        "block_chain": {
+                          "required": true,
+                          "type": "string"
+                        },
+                        "sent": {
+                          "required": true,
+                          "type": "integer"
+                        },
+                        "received": {
+                          "required": true,
+                          "type": "integer"
+                        },
+                        "input_addresses": {
+                          "required": true,
+                          "type": "array",
+                          "items": {
+                            "string": "string"
+                          }
+                        },
+                        "output_addresses": {
+                          "required": true,
+                          "type": "array",
+                          "items": {
+                            "string": "string"
+                          }
+                        },
+                        "transaction_hash": {
+                          "required": true,
+                          "type": "string"
+                        },
+                        "block_hash": {
+                          "required": true,
+                          "type": "string"
+                        },
+                        "confirmations": {
+                          "required": true,
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  },
+                  "id": "#chain_address_notification"
+                },
+                "gem_address_notification_list": {
+                  "mediaType": "application/vnd.gem.gem_address_notification_list+json;charset=UTF-8;version=2.0",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#gem_address_notification"
+                  },
+                  "id": "#gem_address_notification_list"
+                },
+                "gem_address_notification": {
+                  "mediaType": "application/vnd.gem.gem_address_notification+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "properties": {
+                    "notification_key": {
+                      "type": "string"
+                    },
+                    "subscription_key": {
+                      "type": "string"
+                    },
+                    "subscribed_to": {
+                      "type": "string",
+                      "enum": [
+                        "address"
+                      ]
+                    },
+                    "application_key": {
+                      "type": "string"
+                    },
+                    "node_key": {
+                      "type": "string"
+                    },
+                    "account_key": {
+                      "type": "string"
+                    },
+                    "wallet_key": {
+                      "type": "string"
+                    },
+                    "user_key": {
+                      "type": "string"
+                    },
+                    "callback_url": {
+                      "type": "string"
+                    },
+                    "subscription_token": {
+                      "extends": {
+                        "$ref": "#token"
+                      }
+                    },
+                    "sequence": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "payload": {
+                      "address": {
+                        "required": true,
+                        "extends": {
+                          "$ref": "#btcaddr"
+                        }
+                      },
+                      "block_chain": {
+                        "required": true,
+                        "type": "string"
+                      },
+                      "sent": {
+                        "required": true,
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "received": {
+                        "required": true,
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "input_addresses": {
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                          "$ref": "#btcaddr"
+                        }
+                      },
+                      "output_addresses": {
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                          "$ref": "#btcaddr"
+                        }
+                      },
+                      "transaction_hash": {
+                        "required": true,
+                        "extends": {
+                          "$ref": "#tx_hash"
+                        }
+                      },
+                      "block_hash": {
+                        "type": "string"
+                      },
+                      "confirmations": {
+                        "required": true,
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    }
+                  },
+                  "id": "#gem_address_notification"
+                },
+                "authorization_requests": {
+                  "mediaType": "application/vnd.gem.authorization_requests+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "id": "#authorization_requests"
+                },
+                "authorization_request_list": {
+                  "description": "A list of pending authorization requests.",
+                  "mediaType": "application/vnd.gem.authorization_request_list+json;charset=UTF-8;version=2.0",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#authorization_request"
+                  },
+                  "id": "#authorization_request_list"
+                },
+                "authorization_request": {
+                  "mediaType": "application/vnd.gem.authorization_request+json;charset=UTF-8;version=2.0",
+                  "extends": {
+                    "$ref": "urn:patchboard#resource"
+                  },
+                  "additionalProperties": false,
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "unapproved",
+                        "approved",
+                        "denied",
+                        "revoked"
+                      ]
+                    },
+                    "mfa_uri": {
+                      "type": "string",
+                      "minLength": 40,
+                      "maxLength": 75
+                    },
+                    "redirect_uri": {
+                      "type": "string",
+                      "minLength": 5,
+                      "maxLength": 200
+                    },
+                    "created_at": {
+                      "extends": {
+                        "$ref": "#timestamp"
+                      }
+                    },
+                    "metadata": {
+                      "type": "object",
+                      "addtionalProperties": true
+                    },
+                    "user": {
+                      "$ref": "#user"
+                    },
+                    "application": {
+                      "$ref": "#application"
+                    }
+                  },
+                  "id": "#authorization_request"
+                }
+              }
+            }
+          ],
+          "mappings": {
+            "service": {
+              "resource": "service",
+              "url": "https://api.gem.co/"
+            },
+            "developers": {
+              "resource": "developers",
+              "url": "https://api.gem.co/developers"
+            },
+            "developer": {
+              "resource": "developer",
+              "template": "https://api.gem.co/developers/:key"
+            },
+            "developer_salt": {
+              "resource": "developer_salt",
+              "url": "https://api.gem.co/developers",
+              "query": {
+                "email": {
+                  "required": true,
+                  "type": "string",
+                  "format": "email"
+                }
+              }
+            },
+            "developer_session": {
+              "resource": "developer_session",
+              "template": "https://api.gem.co/developers/:key/session"
+            },
+            "developer_query": {
+              "resource": "developer",
+              "url": "https://api.gem.co/developers",
+              "query": {
+                "email": {
+                  "required": true,
+                  "type": "string",
+                  "format": "email"
+                }
+              }
+            },
+            "applications": {
+              "resource": "applications",
+              "template": "https://api.gem.co/developers/:key/apps"
+            },
+            "app": {
+              "resource": "applications",
+              "url": "https://api.gem.co/apps"
+            },
+            "application": {
+              "resource": "application",
+              "template": "https://api.gem.co/apps/:key"
+            },
+            "application_instance": {
+              "resource": "application_instance",
+              "template": "https://api.gem.co/instances/:key"
+            },
+            "application_instances": {
+              "resource": "application_instances",
+              "template": "https://api.gem.co/apps/:key/instances"
+            },
+            "application_users": {
+              "resource": "application_users",
+              "template": "https://api.gem.co/apps/:key/users"
+            },
+            "application_wallets": {
+              "resource": "wallets",
+              "template": "https://api.gem.co/apps/:key/wallets"
+            },
+            "users": {
+              "resource": "users",
+              "url": "https://api.gem.co/users"
+            },
+            "login": {
+              "resource": "user",
+              "url": "https://api.gem.co/users",
+              "query": {
+                "email": {
+                  "required": true,
+                  "type": "string",
+                  "format": "email"
+                }
+              }
+            },
+            "user": {
+              "resource": "user",
+              "template": "https://api.gem.co/users/:key"
+            },
+            "user_query": {
+              "resource": "user",
+              "url": "https://api.gem.co/users",
+              "query": {
+                "email": {
+                  "required": true,
+                  "type": "string",
+                  "format": "email"
+                }
+              }
+            },
+            "devices_query": {
+              "resource": "devices",
+              "url": "https://api.gem.co/devices",
+              "query": {
+                "email": {
+                  "required": true,
+                  "type": "string",
+                  "format": "email"
+                }
+              }
+            },
+            "devices": {
+              "resource": "devices",
+              "template": "https://api.gem.co/users/:key/devices"
+            },
+            "device": {
+              "resource": "device",
+              "template": "https://api.gem.co/devices/:key"
+            },
+            "rules": {
+              "resource": "rules",
+              "template": "https://api.gem.co/rules/:scope/:key"
+            },
+            "rule": {
+              "resource": "rule",
+              "template": "https://api.gem.co/rule/:key"
+            },
+            "wallets": {
+              "resource": "wallets",
+              "template": "https://api.gem.co/users/:key/wallets"
+            },
+            "wallet": {
+              "resource": "wallet",
+              "template": "https://api.gem.co/wallets/:key"
+            },
+            "wallet_transactions": {
+              "resource": "wallet_transactions",
+              "template": "https://api.gem.co/wallets/:key/transactions",
+              "query": {
+                "status": {
+                  "type": "string",
+                  "maxLength": 100
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "incoming",
+                    "outgoing",
+                    "change"
+                  ]
+                },
+                "limit": {
+                  "type": "integer",
+                  "maximum": 100
+                },
+                "offset": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            },
+            "accounts": {
+              "resource": "accounts",
+              "template": "https://api.gem.co/wallets/:key/accounts"
+            },
+            "account": {
+              "resource": "account",
+              "template": "https://api.gem.co/accounts/:key"
+            },
+            "addresses": {
+              "resource": "addresses",
+              "template": "https://api.gem.co/accounts/:key/addresses"
+            },
+            "transactions": {
+              "resource": "transactions",
+              "template": "https://api.gem.co/account/:key/transactions",
+              "query": {
+                "status": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "incoming",
+                    "outgoing",
+                    "change"
+                  ]
+                },
+                "limit": {
+                  "type": "integer",
+                  "maximum": 100
+                },
+                "offset": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            },
+            "transaction_query": {
+              "resource": "transactions",
+              "url": "https://api.gem.co/transactions"
+            },
+            "transaction": {
+              "resource": "transaction",
+              "template": "https://api.gem.co/transactions/:key"
+            },
+            "subscriptions": {
+              "resource": "subscriptions",
+              "template": "https://api.gem.co/application/:key/subscriptions"
+            },
+            "subscription": {
+              "resource": "subscription",
+              "template": "https://api.gem.co/subscriptions/:key"
+            },
+            "undelivered": {
+              "resource": "application",
+              "template": "https://api.gem.co/apps/:key/undelivered"
+            },
+            "address_notifications": {
+              "resource": "notifications",
+              "url": "https://api.gem.co/notifications/address",
+              "query": {
+                "SECRET_TOKEN": {
+                  "required": true,
+                  "type": "string"
+                },
+                "adapter": {
+                  "required": false,
+                  "type": "string",
+                  "enum": [
+                    "chain",
+                    "cypher"
+                  ]
+                }
+              }
+            },
+            "authorization_requests": {
+              "resource": "authorization_requests",
+              "template": "https://api.gem.co/user/:key/auth"
+            },
+            "authorization_request": {
+              "resource": "authorization_request",
+              "template": "https://api.gem.co/auth/:key"
+            }
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 13 Jul 2015 17:07:44 GMT
+- request:
+    method: post
+    uri: https://api.gem.co/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"bitflashvcr@gmail.com","first_name":"Bit","last_name":"Flash","default_wallet":{"name":"default","primary_public_seed":"xpub661MyMwAqRbcEmVf24S5gtPv2yeYHBXiVeXsYKFsqYwsGQmJgYTusvugseF2pCUcvtaNa5oKG7P2AFwKfvCw5hXeKqoJKuCf8zURNvg6qfV","primary_private_seed":{"iterations":100000,"salt":"cd123bc8e170013e4fa80b0ab7e2e55d","nonce":"fe11913785a2fab48a33096c4bcf2ab8f5613aed31785f05","ciphertext":"3d31e8ba86d8c0f85e39395ec5d667f27c741263b267d9e7a9422ab89a91f3b075fe80bedd1dddefb8e256d2ed4644a81b543bee1276153d8b08d7a5bdbea2d492cb8a6b80e6d46c323efc2adbc246df"}},"device_name":"device","redirect_uri":"https://bitflash.herokuapp.com"}'
+    headers:
+      User-Agent:
+      - patchboard-rb v0.1.0
+      Content-Type:
+      - application/vnd.gem.user+json;charset=UTF-8;version=2.0
+      Accept:
+      - application/vnd.gem.authorization_request+json;charset=UTF-8;version=2.0
+      Authorization:
+      - Gem-Identify api_token="nvti-J8zFNctXUy8Th0ilEPsSfwtSKwk7AH7UBKDyTU"
+      Host:
+      - api.gem.co
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 13 Jul 2015 17:07:44 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '50'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"message":"conflict","reason":"GemAPI::Conflict"}'
+    http_version: 
+  recorded_at: Mon, 13 Jul 2015 17:07:44 GMT
+recorded_with: VCR 2.9.3

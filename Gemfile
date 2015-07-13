@@ -1,31 +1,32 @@
 source 'https://rubygems.org'
 
-gem 'dotenv-rails', :groups => [:development, :test]
 gem 'rails', '4.2.1'
 gem 'pg'
-gem 'round'
+gem 'round', '0.8.1'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
-
-group :development, :test do
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-end
-
-gem 'rspec-rails', group: [:development, :test]
-gem 'capybara', group: [:development, :test]
-gem 'launchy', group: [:development, :test]
-gem 'factory_girl', group: [:development, :test]
-gem 'valid_attribute', group: [:development, :test]
-gem 'shoulda-matchers', group: [:development, :test], require: false
-gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'foundation-rails'
 gem "font-awesome-rails"
+gem 'sdoc', '~> 0.4.0', group: :doc
+
+group :development, :test do
+  gem 'dotenv-rails'
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'factory_girl'
+  gem 'valid_attribute'
+  gem 'pry-rails'
+  gem 'shoulda-matchers', require: false
+end
+
+gem 'rails_12factor', group: :production
 
 ruby "2.1.5"
