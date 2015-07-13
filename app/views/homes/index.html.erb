@@ -62,17 +62,17 @@
 <% end %>
 
 <% if user_signed_in? %>
-  <div class="row full-width">
-    <div class="small-9 columns transactions" role="content">
-      <div class="panel index-panel">
+  <div class="row full-width" data-equalizer>
+    <div class="small-9 columns transactions data-equalizer-watch" role="content">
+      <div class="panel index-panel" data-equalizer-watch>
         <% 10.times do %>
           <p><%= "Transaction = 100btc to Jane Doe 1/1/11" %></p>
         <% end %>
       </div>
     </div>
 
-    <aside class="small-3 columns friends-list">
-      <div class="panel index-panel">
+    <aside class="small-3 columns friends-list" data-equalizer-watch>
+      <div class="panel index-panel" data-equalizer-watch>
         <h5>Friends</h5>
         <br>
         <% @friendships.each do |friendship| %>
