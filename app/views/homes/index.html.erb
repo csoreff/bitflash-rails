@@ -82,7 +82,7 @@
           </ul>
           <ul id="drop" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
             <li><a href="#">Send Money</a></li>
-            <li><a href="#">Delete Friend</a></li>
+            <li><%= link_to 'Delete Friend', friendship_path(friendship), method: :delete, data: { confirm: 'Are you sure?' } %></li>
           </ul>
         <% end %>
         <br><br>
