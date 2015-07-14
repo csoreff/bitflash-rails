@@ -8,11 +8,11 @@ class TransactionsController < ApplicationController
   def create
     current_user.authenticate_user
     @friendship = Friendship.find(params[:friendship_id])
-    params[:transactions][:sender_address_id] = current_user.addresses.first
-    params[:transactions][:recipient_address_id] =
-    amount =
+    params[:transaction][:sender_address_id] = current_user.addresses.first
+    params[:transaction][:recipient_address_id] =
+    amount = params[:transaction][:amount]
     @transaction = @friendship.transactions.new(transaction_params)
-    @review.user = current_user
+
     # @friendship = current_user.friendships.build(friend_id: params[:friend_id])
     # if @friendship.save
     #   flash[:notice] = "Friend added."
@@ -25,7 +25,7 @@ class TransactionsController < ApplicationController
 
   protected
 
-  def review_params
+  def transaction_params
     params.require(:transaction).permit(:amount, :sender_address_id, :recipient_address_id)
   end
 end
