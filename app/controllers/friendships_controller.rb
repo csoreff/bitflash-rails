@@ -4,13 +4,14 @@ class FriendshipsController < ApplicationController
   end
 
   def index
-    unless params[:search].empty?
-      @search_result = User.where("email LIKE ?", "%#{params[:search]}%").first
-    end
+    # unless params[:search].empty?
+    #   @search_result = User.where("email LIKE ?", "%#{params[:search]}%").first
+    # end
   end
 
   def create
-    @friendship = current_user.friendships.build(friend_id: params[:friend_id])
+    friend_id = User.where("email LIKE ?", "%#{params[:email]}%").first.id
+    @friendship = current_user.friendships.build(friend_id: friend_id)
     if @friendship.save
       flash[:notice] = "Friend added."
       redirect_to root_url

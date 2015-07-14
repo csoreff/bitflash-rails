@@ -85,7 +85,20 @@
           </ul>
         <% end %>
         <br><br>
-        <%= link_to "Add New Friend", controller: "friendships", action: "new", class: "add-friend-link" %>
+        <div class="search-friend-box">
+        <%= form_tag(controller: "friendships", action: "create", method: "post") do %>
+          <div class="row collapse">
+             <div class="row collapse postfix-round">
+              <p>Add a New Friend</p>
+                <div class="small-9 columns">
+                  <%= text_field_tag(:email, nil, placeholder: "Friend's Email") %>
+                </div>
+                <div class="small-3 columns">
+                  <%= submit_tag("Go", class: "button postfix") %>
+                </div>
+              </div>
+          </div>
+        <% end %>
       </div>
     </aside>
   </div>
