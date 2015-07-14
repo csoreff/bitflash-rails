@@ -48104,3 +48104,22 @@ Started GET "/assets/application.self-1509cb3433bf7f60a75710bd4d8561d25423676b3c
 
 
 Started GET "/assets/favicon-0f823e52d8b7724a2e13e03bb544cc507934122fdf647477f86bb601bac5661c.ico" for ::1 at 2015-07-13 20:09:50 -0400
+
+
+Started GET "/" for ::1 at 2015-07-14 10:38:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomesController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mFriendship Load (0.6ms)[0m  [1mSELECT "friendships".* FROM "friendships" WHERE "friendships"."user_id" = $1[0m  [["user_id", 3]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered homes/index.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 939ms (Views: 810.9ms | ActiveRecord: 28.3ms)
+
+
+Started GET "/friendships/new?class=add-friend-link" for ::1 at 2015-07-14 10:38:37 -0400
+Processing by FriendshipsController#new as HTML
+  Parameters: {"class"=>"add-friend-link"}
+  Rendered friendships/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 350ms (Views: 348.8ms | ActiveRecord: 0.6ms)
