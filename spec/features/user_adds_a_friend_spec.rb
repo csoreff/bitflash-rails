@@ -3,27 +3,19 @@ require 'rails_helper'
 feature 'user adds a friend', %{
   As a signed up user
   I want to sign in
-  So that I can regain access to my account
+  And be able to add a friend to my friends list
 } do
-  scenario 'specify valid credentials' do
+
+  scenario 'add a friend' do
     user = FactoryGirl.create(:user)
 
-    visit new_user_session_path
-
-    fill_in 'Email', with: user.email
-    fill_in 'Password', with: user.password
-
-    click_button 'Log in'
+    sign_in_as(user)
 
     expect(page).to have_content('Signed in successfully')
-    expect(page).to have_content('Sign Out')
-  end
 
-  scenario 'specify invalid credentials' do
-    visit new_user_session_path
+    fill_in 'email', with: user.email
+    click_button 'Go'
 
-    click_button 'Log in'
-    expect(page).to have_content('Invalid email or password')
-    expect(page).to_not have_content('Sign Out')
+    expect(page).to have_content(user.first_name)
   end
 end
