@@ -17,10 +17,10 @@ feature 'user registers', %Q{
 
     fill_in 'First name', with: 'Bit'
     fill_in 'Last name', with: 'Flash'
-    fill_in 'Email', with: 'bitflash#{}@mailinator.com'
+    fill_in 'Email', with: "bitflash#{rand(999999999)}@mailinator.com"
     fill_in 'Password', with: 'mybitflash'
     fill_in 'Password confirmation', with: 'mybitflash'
-    fill_in 'Passphrase', with: 'This is a passphrase'
+    fill_in 'Passphrase', with: 'passphrase'
 
     click_button 'Sign up'
 
@@ -32,7 +32,7 @@ feature 'user registers', %Q{
     visit new_user_registration_path
 
     click_button 'Sign up'
-    expect(page).to have_content("Please fill out all fields!")
+    expect(page).to have_content("You were not registered successfully")
     expect(page).to_not have_content('Sign Out')
   end
 end

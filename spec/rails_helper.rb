@@ -7,7 +7,6 @@ require 'shoulda-matchers'
 require File.join(File.dirname(__FILE__), 'support/valid_attribute')
 require File.join(File.dirname(__FILE__), 'support/factory_girl')
 require 'capybara/rspec'
-require 'vcr'
 
 ActiveRecord::Migration.maintain_test_schema!
 

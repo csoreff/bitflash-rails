@@ -4,10 +4,10 @@ FactoryGirl.define do
   factory :user do
     first_name 'Bit'
     last_name 'Flash'
-    email 'bitflashvcr@gmail.com'
+    email 'bitflash276093961@mailinator.com'
     password 'mybitflash'
     password_confirmation 'mybitflash'
-    passphrase 'This is a passphrase'
-    device_token 'GH1746492FJDGLD'
+    passphrase 'passphrase'
+    device_token 'cLoaOOqk8NcODxLA5cG6Y7bKvcK9IaZPkrMGU_MUgP8'
   end
 end

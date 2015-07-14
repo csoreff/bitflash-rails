@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-feature 'user signs in', %Q{
+feature 'user adds a friend', %{
   As a signed up user
   I want to sign in
   So that I can regain access to my account
 } do
-  scenario 'specify valid credentials', vcr: true do
+  scenario 'specify valid credentials' do
     user = FactoryGirl.create(:user)
 
     visit new_user_session_path
