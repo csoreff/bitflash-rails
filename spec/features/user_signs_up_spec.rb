@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'vcr'
 
 feature 'user registers', %Q{
   As a visitor
@@ -18,7 +17,7 @@ feature 'user registers', %Q{
 
     fill_in 'First name', with: 'Bit'
     fill_in 'Last name', with: 'Flash'
-    fill_in 'Email', with: 'bitflashvcr@gmail.com'
+    fill_in 'Email', with: 'bitflash#{}@mailinator.com'
     fill_in 'Password', with: 'mybitflash'
     fill_in 'Password confirmation', with: 'mybitflash'
     fill_in 'Passphrase', with: 'This is a passphrase'
