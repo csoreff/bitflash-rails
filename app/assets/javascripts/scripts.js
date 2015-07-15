@@ -16,6 +16,10 @@ function smoothScroll() {
 $(document).foundation();
 $(".full-height").height($(".main").parent().height());
 
+$( ".flash" ).fadeOut( 3000, function() {
+    // Animation complete.
+  });
+
 // $(document).ready(function(){
 //   $(".add-friend-link").on("click", "a", function(){
 //     var reviewId = $(this).attr("data-review-id");
