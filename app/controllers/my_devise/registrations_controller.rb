@@ -15,24 +15,19 @@ class MyDevise::RegistrationsController < Devise::RegistrationsController
   def create
     begin
       client = Round.client
-      if params[:user]
-        first_name = params[:user][:first_name]
-        last_name = params[:user][:last_name]
-        email = params[:user][:email]
-        password = params[:user][:password]
-        passphrase = params[:user][:passphrase]
-      end
       client.authenticate_identify(api_token: ENV['ROUND_API_TOKEN'])
       # allow(client.users).to_receive(:create)
-      params[:user][:device_token] = client.users.create(
-        first_name: first_name,
-        last_name: last_name,
-        email: email,
-        passphrase: passphrase,
-        device_name: "device",
-        redirect_uri: 'https://bitflash.herokuapp.com'
-      )
-      # Keep original functionality of RegistrationsController, just add to it
+      if params[:user]
+        params[:user][:device_token] = client.users.create(
+          first_name: params[:user][:first_name],
+          last_name: params[:user][:last_name],
+          email: params[:user][:email],
+          passphrase: params[:user][:passphrase],
+          device_name: "device#{rand(99999)}",
+          redirect_uri: 'https://bitflash.herokuapp.com'
+        )
+      end
+      # Keep original functionality of RegistrationsController
       super
     rescue StandardError
       flash[:warning] = 'You were not registered successfully, please ensure all information is correct and that you have not previously registered with this email.'
