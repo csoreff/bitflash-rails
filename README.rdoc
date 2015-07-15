@@ -1,28 +1,17 @@
-== README
+# BitFlash
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Code Climate](https://codeclimate.com/github/csoreff/bitflash-rails/badges/gpa.svg)](https://codeclimate.com/github/csoreff/bitflash-rails)
 
-Things you may want to cover:
+### Bitcoin Remittance App ###
 
-* Ruby version
+<tt>http://bitflash.herokuapp.com/</tt>
 
-* System dependencies
+With most remittance companies and apps, you must pay an arm and a leg to transfer money to your friends, family, and acquaintance. Usually you will be charged a percentage of the transaction amount, or a flat fee.  With Bitcoin, we eliminate the middleman that other applications need to include in their costs, making transfers almost free.
 
-* Configuration
+## Features
+- Add friends to your friends list.
+- Send bitcoin with the click of a button.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Ease of use
+Usually, when you are using a Bitcoin application, to send a payment you need to either scan a QR code or copy and paste that long, impossible to remember btc address.
+BitFlash was created to eliminate the need to go through this annoying process. With Bitflash, you never need to worry about what your friends' Bitcoin addresses are.  If you add someone to your friends list, you can send money to them merely by entering the amount and confirming.
