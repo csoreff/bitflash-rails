@@ -27,6 +27,11 @@ group :development, :test do
   gem 'shoulda-matchers', require: false
 end
 
+group :test do
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
+end
+
 gem 'rails_12factor', group: :production
 
 ruby "2.1.5"
