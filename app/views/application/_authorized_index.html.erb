@@ -13,7 +13,7 @@
         <br>
         <% @friendships.each do |friendship| %>
           <ul class="friend-names">
-            <li><a href='#' data-dropdown="drop" class="friend-button"><%= friendship.friend.first_name + " " + friendship.friend.last_name unless friendship.friend.nil?%></a><li>
+            <li><a href='#' data-dropdown="drop" class="friend-button"><%= friendship.friend.name unless friendship.friend.nil?%></a><li>
           </ul>
           <ul id="drop" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
             <li><%= link_to 'Send Money', new_friendship_transaction_path(friendship)%></li>
