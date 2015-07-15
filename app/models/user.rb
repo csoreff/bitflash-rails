@@ -32,4 +32,8 @@ class User < ActiveRecord::Base
     transaction = my_account.pay([{address: payee_address,
       amount: amount}], 1, 'bitflash.herokuapp.com')
   end
+
+  def name
+    "#{first_name} #{last_name}"
+  end
 end
