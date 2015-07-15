@@ -8,14 +8,12 @@ feature 'user adds a friend', %{
 
   scenario 'add a friend' do
     user = FactoryGirl.create(:user)
+    user2 = FactoryGirl.create(:user2)
 
     sign_in_as(user)
-
-    expect(page).to have_content('Signed in successfully')
-
-    fill_in 'email', with: user.email
+    fill_in 'email', with: user2.email
     click_button 'Go'
 
-    expect(page).to have_content(user.first_name)
+    expect(page).to have_content(user2.first_name)
   end
 end
