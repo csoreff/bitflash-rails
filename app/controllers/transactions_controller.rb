@@ -8,7 +8,7 @@ class TransactionsController < ApplicationController
   def create
     current_user.authenticate_user
     @friendship = Friendship.find(params[:friendship_id])
-    params[:transaction][:sender_address_id] = current_user.addresses.first
+    params[:transaction][:sender_address_id] = current_user.btcaddresses.first
     params[:transaction][:recipient_address_id] =
     amount = params[:transaction][:amount]
     @transaction = @friendship.transactions.new(transaction_params)
