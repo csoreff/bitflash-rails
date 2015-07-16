@@ -22,14 +22,18 @@ class User < ActiveRecord::Base
     authenticated_user.wallet.accounts['default']
   end
 
-  def create_new_address(authenticated_user)
-    new_address = authenticated_user.addresses.create
+  def create_new_address
+    new_address = addresses.create
     addresses.new(btc_addess: new_address)
   end
 
-  def make_payment(authenticated_user, password, payee_address, amount)
-    authenticated_user.wallet.unlock(password)
-    transaction = my_account.pay([{address: payee_address,
+  def get_balance
+    balance
+  end
+
+  def make_payment(passphrase, payee_address, amount)
+    wallet.unlock(passphrase)
+    transaction = pay([{address: payee_address,
       amount: amount}], 1, 'bitflash.herokuapp.com')
   end
 
