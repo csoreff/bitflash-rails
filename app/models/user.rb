@@ -24,7 +24,8 @@ class User < ActiveRecord::Base
 
   def create_new_address
     new_address = addresses.create
-    addresses.new(btc_addess: new_address)
+    btc_address = new_address.string
+    addresses.new(btc_address: btc_address)
   end
 
   def get_balance
