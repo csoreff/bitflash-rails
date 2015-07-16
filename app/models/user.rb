@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   attr_accessor :passphrase
 
   has_many :friendships
-  has_many :addresses
+  has_many :btcaddresses
   has_many :friends, :through => :friendships
 
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
@@ -23,9 +23,8 @@ class User < ActiveRecord::Base
   end
 
   def create_new_address
-    new_address = addresses.create
-    btc_address = new_address.string
-    addresses.new(btc_address: btc_address)
+    new_address = authenticate_user.addresses.create
+    new_address.string
   end
 
   def get_balance

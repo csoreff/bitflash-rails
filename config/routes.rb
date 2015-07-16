@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :transactions, only: [:new, :create]
   end
 
-  resources :addresses, only: [:index, :create]
+  resources :btcaddresses, only: [:index, :create]
 
   get '/users/:id/account', to: 'accounts#index'
 end
