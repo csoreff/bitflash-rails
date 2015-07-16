@@ -27,7 +27,9 @@ class MyDevise::RegistrationsController < Devise::RegistrationsController
     # Keep original functionality of RegistrationsController
     super
   rescue StandardError
-    flash[:warning] = 'You were not registered successfully, please ensure all information is correct and that you have not previously registered with this email.'
+    flash[:warning] = 'You were not registered successfully, please ensure
+      all information is correct and that you have not previously registered
+      with this email.'
     redirect_to new_user_registration_path
   end
 
