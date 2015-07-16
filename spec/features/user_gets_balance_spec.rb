@@ -6,7 +6,7 @@ feature 'User checks theirs balance', %{
   And see my current balance
 } do
 
-  scenario 'get balance' do
+  scenario 'user gets balance' do
     user = FactoryGirl.create(:user)
 
     sign_in_as(user)
