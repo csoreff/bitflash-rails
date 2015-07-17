@@ -7,7 +7,7 @@
         <%- end -%>
       </div>
     <%- end -%>
-    <p>You are sending money to: <%= @friendship.friend.first_name + " " + @friendship.friend.last_name%></p>
+    <p>You are sending money to: <%= @friendship.friend.name%></p>
     <%= f.label :amount %>
     <%= f.number_field :amount %><br>
 

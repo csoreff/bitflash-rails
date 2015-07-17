@@ -6,12 +6,12 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    current_user.authenticate_user
     @friendship = Friendship.find(params[:friendship_id])
-    params[:transaction][:sender_address_id] = current_user.btcaddresses.first
-    params[:transaction][:recipient_address_id] =
+    params[:transaction][:sender_address_id] = current_user.btcaddresses.first.id
+    params[:transaction][:recipient_address_id] = @friendship.friend.btcaddresses.first.id
     amount = params[:transaction][:amount]
-    @transaction = @friendship.transactions.new(transaction_params)
+    # @transaction = @friendship.transactions.new(transaction_params)
+    binding.pry
 
     # @friendship = current_user.friendships.build(friend_id: params[:friend_id])
     # if @friendship.save
