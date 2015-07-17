@@ -22,8 +22,8 @@ class User < ActiveRecord::Base
     authenticated_user.wallet.accounts[account_type]
   end
 
-  def create_new_address
-    new_address = authenticate_user.addresses.create
+  def create_new_address(account_type='default')
+    new_address = authenticate_user(account_type).addresses.create
     new_address.string
   end
 
@@ -32,17 +32,25 @@ class User < ActiveRecord::Base
   end
 
   def make_btc_payment(passphrase, payee_address, amount)
-    unlocked_wallet = authenticate_user.wallet.unlock(passphrase)
-    wallet.unlock(passphrase)
-    transaction = pay([{address: payee_address,
+    authenticated_user = authenticate_user
+    authenticated_user.wallet.unlock(passphrase)
+    transaction = authenticated_user.pay([{address: payee_address,
       amount: amount}], 1, 'bitflash.herokuapp.com')
   end
 
   # make_doge_payment for testing purposes only
   def make_doge_payment(passphrase, payee_address, amount)
-    authenticate_user('doge').wallet.unlock(passphrase)
+    authenticated_user = authenticate_user
+    authenticated_user('doge').wallet.unlock(passphrase)
     transaction = pay([{address: payee_address,
       amount: amount}], 1, 'bitflash.herokuapp.com')
+  end
+
+  def get_transactions
+    authenticate_user.transactions(
+      type: ['incoming', 'outgoing']
+      status: ['confirmed', 'unconfirmed']
+    )
   end
 
   def name
