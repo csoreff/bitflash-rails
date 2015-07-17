@@ -16,7 +16,7 @@
             <li><a href='#' data-dropdown="drop" class="friend-button"><%= friendship.friend.name unless friendship.friend.nil?%></a><li>
           </ul>
           <ul id="drop" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
-            <li><%= link_to 'Send Money', new_friendship_transaction_path(friendship)%></li>
+            <li><%= link_to 'Send Money', new_friendship_transaction_path(friendship), id: "send-money"%></li>
             <li><%= link_to 'Delete Friend', friendship_path(friendship), method: :delete, id: "delete-friend", data: { confirm: 'Are you sure?' } %></li>
           </ul>
         <% end %>
