@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :friendships do
     resources :transactions, only: [:new, :create]
   end
-
+  resources :transactions, only: [:index]
   resources :btcaddresses, only: [:index, :create]
 
   get '/users/:id/account', to: 'accounts#index'

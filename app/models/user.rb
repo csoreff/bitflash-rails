@@ -47,10 +47,7 @@ class User < ActiveRecord::Base
   end
 
   def get_transactions
-    authenticate_user.transactions(
-      type: ['incoming', 'outgoing']
-      status: ['confirmed', 'unconfirmed']
-    )
+    authenticate_user.transactions
   end
 
   def name
