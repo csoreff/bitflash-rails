@@ -7,7 +7,7 @@ feature 'user signs in', %{
 } do
 
   scenario 'specify valid credentials' do
-    user = FactoryGirl.create(:user)
+    user = FactoryGirl.create(:user2)
 
     sign_in_as(user)
 

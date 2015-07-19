@@ -7,27 +7,27 @@ feature 'User has a transaction', %{
   And also receive payments
 } do
 
-  # scenario 'User sends a payment' do
-  #   user = FactoryGirl.create(:user)
-  #   user2 = FactoryGirl.create(:user2)
+  scenario 'User sends a payment', js: true do
+    user = FactoryGirl.create(:user)
+    user2 = FactoryGirl.create(:user2)
+    FactoryGirl.create(:btcaddress)
+    FactoryGirl.create(:btcaddress2)
 
-  #   sign_in_as(user)
-  #   user.create_new_address('doge')
-  #   user2.create_new_address('doge')
-  #   fill_in 'email', with: user2.email
-  #   click_button 'Go'
-  #   click_link "#{user2.first_name} #{user2.last_name}"
-  #   click_link 'send-money'
-  # end
+    sign_in_as(user)
+    fill_in 'email', with: user2.email
+    click_button 'Go'
+    click_link "#{user2.first_name} #{user2.last_name}"
+    click_link 'Send Money'
+    fill_in 'Amount', with: 37_000
+    fill_in 'Passphrase', with: user.passphrase
+    click_button 'Submit'
+    page.driver.browser.switch_to.alert.accept
+    # Sleep while I get 2FA code from my phone and enter it in browser
+    uri = URI.parse(current_url)
+    puts uri
+    sleep 20
 
-  # scenario 'user receives a payment' do
-  #   user = FactoryGirl.create(:user)
-  #   user2 = FactoryGirl.create(:user2)
-
-  #   sign_in_as(user)
-  #   fill_in 'email', with: user2.email
-  #   click_button 'Go'
-
-  #   expect(page).to have_content(user2.first_name)
-  # end
+    expect(user.authenticate_user.pending_balance).not_to eq(0)
+    expect(user2.authenticate_user.pending_balance).not_to eq(0)
+  end
 end

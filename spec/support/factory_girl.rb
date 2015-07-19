@@ -20,4 +20,14 @@ FactoryGirl.define do
     passphrase 'passphrase'
     device_token '4GkiGBWOBU6Bjeh6ptSXSeTFNkFyaluQQkHIRfZ3h2M'
   end
+
+  factory :btcaddress do
+    user_id 1
+    address '3MoKfiatf5UwLWi4ZP7eWebMRgEuqTKQFv'
+  end
+
+  factory :btcaddress2, class: Btcaddress do
+    user_id 2
+    address '3Caz2uGDb8PP6BGubbTueFPmvMhhYc4GYF'
+  end
 end

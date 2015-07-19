@@ -39,12 +39,12 @@ class User < ActiveRecord::Base
   end
 
   # make_doge_payment for testing purposes only
-  def make_doge_payment(passphrase, payee_address, amount)
-    authenticated_user = authenticate_user
-    authenticated_user('doge').wallet.unlock(passphrase)
-    transaction = pay([{address: payee_address,
-      amount: amount.to_i}], 1, 'https://bitflash.herokuapp.com')
-  end
+  # def make_doge_payment(passphrase, payee_address, amount)
+  #   authenticated_user = authenticate_user('doge')
+  #   authenticated_user.wallet.unlock(passphrase)
+  #   transaction = authenticated_user.pay([{address: payee_address,
+  #     amount: amount.to_i}], 1, 'https://bitflash.herokuapp.com')
+  # end
 
   def get_transactions
     authenticate_user.transactions
