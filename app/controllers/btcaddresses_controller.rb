@@ -1,5 +1,6 @@
 class BtcaddressesController < ApplicationController
   def index
+    @friendships = current_user.friendships
     @btcaddresses = current_user.btcaddresses.order(created_at: :desc)
   end
 

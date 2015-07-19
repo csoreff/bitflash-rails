@@ -1,9 +1,11 @@
 class TransactionsController < ApplicationController
   def index
+    @friendships = current_user.friendships
     @transactions = current_user.get_transactions
   end
 
   def new
+    @friendships = current_user.friendships
     @friendship = Friendship.find(params[:friendship_id])
     @transaction = Transaction.new
   end

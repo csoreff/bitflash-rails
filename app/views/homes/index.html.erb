@@ -1,5 +1,5 @@
-<% if user_signed_in? %>
-  <%= render 'authorized_index' %>
-<% else %>
+<% unless user_signed_in? %>
   <%= render 'unauthorized_index' %>
 <% end %>
+
+<%= 'index' %>

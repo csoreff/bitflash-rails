@@ -1,9 +1,7 @@
   <div class="row full-width" data-equalizer>
     <div class="small-9 columns transactions data-equalizer-watch" role="content">
       <div class="panel transactions-panel" data-equalizer-watch>
-        <% 10.times do %>
-          <p><%= "Transaction = 100btc to Jane Doe 1/1/11" %></p>
-        <% end %>
+        <%= yield %>
       </div>
     </div>
 
