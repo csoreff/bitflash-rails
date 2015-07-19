@@ -10,8 +10,8 @@ feature 'User checks theirs balance', %{
     user = FactoryGirl.create(:user)
 
     sign_in_as(user)
-    visit "/users/#{user.id}/account"
+    visit "/account"
 
-    expect(page).to have_content("Balance: 0")
+    expect(page).to have_content("Balance:")
   end
 end

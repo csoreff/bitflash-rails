@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
     authenticated_user = authenticate_user
     authenticated_user.wallet.unlock(passphrase)
     transaction = authenticated_user.pay([{address: payee_address,
-      amount: amount.to_i}], 1, 'http://bitflash.herokuapp.com')
+      amount: amount.to_i}], 1, 'https://bitflash.herokuapp.com')
   end
 
   # make_doge_payment for testing purposes only
@@ -43,7 +43,7 @@ class User < ActiveRecord::Base
     authenticated_user = authenticate_user
     authenticated_user('doge').wallet.unlock(passphrase)
     transaction = pay([{address: payee_address,
-      amount: amount}], 1, 'http://bitflash.herokuapp.com')
+      amount: amount.to_i}], 1, 'https://bitflash.herokuapp.com')
   end
 
   def get_transactions
@@ -52,5 +52,11 @@ class User < ActiveRecord::Base
 
   def name
     "#{first_name} #{last_name}"
+  end
+
+  def non_confirmed_rescue
+    rescue
+      @friendships = current_user.friendships
+      flash[:notice] = 'Please check your email inbox to confirm your account and complete setup.'
   end
 end

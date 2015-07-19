@@ -34,7 +34,11 @@
     </div>
   <% end %>
 
-  <%= yield %>
+  <% if user_signed_in? %>
+    <%= render 'authorized_index'  %>
+  <% else %>
+    <%= yield %>
+  <% end %>
 
   <%= javascript_include_tag 'application' %>
   <script>
