@@ -3,3 +3,4 @@
 /log/*
 !/log/.keep
 /tmp
+/spec/support/factory_girl.rb
