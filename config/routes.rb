@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users,
              :controllers => { registrations: "my_devise/registrations"}
 
-  resources :friendships, only: [:create, :destroy] do
+  resources :friendships, only: [:index, :create, :destroy] do
     resources :transactions, only: [:new, :create]
   end
   resources :transactions, only: [:index]

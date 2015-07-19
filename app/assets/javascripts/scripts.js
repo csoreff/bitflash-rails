@@ -21,15 +21,14 @@ $(".full-height").height($(".main").parent().height());
 //   });
 
 // $(document).ready(function(){
-//   $(".add-friend-link").on("click", "a", function(){
-//     var reviewId = $(this).attr("data-review-id");
-//     var voteValue = $(this).attr("data-vote-value");
+//   $(".add-friend-link").change(function(){
+//     var search = $(this).attr("search");
 //   $.ajax({
-//     type: "PATCH",
-//     url: "/reviews/" + reviewId,
-//     data: { "vote_value" : voteValue },
+//     type: "GET",
+//     url: "/friendships"
+//     data: { "search" : search },
 //     dataType: "json",
-//     success: function(reviewObject) {
+//     success: function() {
 //         $("#vote_score_" + reviewObject.review.id).html(reviewObject.total);
 //     }
 //     });
