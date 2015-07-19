@@ -9,7 +9,9 @@
     <%- end -%>
     <p>You are sending money to: <%= @friendship.friend.name%></p>
     <%= f.label :amount %>
-    <%= f.number_field :amount %><br>
+    <%= f.number_field :amount %>
+    <%= f.label :passphrase %>
+    <%= f.text_field :passphrase %><br>
 
     <%= f.submit "Submit", data: { confirm: 'Are you sure?' } %>
   <% end %>

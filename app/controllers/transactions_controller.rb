@@ -4,7 +4,6 @@ class TransactionsController < ApplicationController
   end
 
   def new
-    binding.pry
     @friendship = Friendship.find(params[:friendship_id])
     @transaction = Transaction.new
   end
@@ -12,18 +11,16 @@ class TransactionsController < ApplicationController
   def create
     @friendship = Friendship.find(params[:friendship_id])
     params[:transaction][:sender_address_id] =
-      current_user.btcaddresses.first.id
+      current_user.btcaddresses.order('created_at DESC').first.id
     params[:transaction][:recipient_address_id] =
-      @friendship.friend.btcaddresses.first.id
+      @friendship.friend.btcaddresses.order('created_at DESC').first.id
     friend_address = Btcaddress.find(
       params[:transaction][:recipient_address_id]
     ).address
-    amount = params[:transaction][:amount]
-    passphrase = params[:transaction][:passphrase]
     new_transaction = current_user.make_btc_payment(
-      passphrase,
+      params[:transaction][:passphrase],
       friend_address,
-      amount
+      params[:transaction][:amount]
     )
     if new_transaction.mfa_uri
       @friendship.transactions.create(transaction_params)

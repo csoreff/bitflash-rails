@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'homes#index'
+  get '/account', to: 'accounts#index'
 
   devise_for :users,
              :controllers => { registrations: "my_devise/registrations"}
@@ -9,6 +10,4 @@ Rails.application.routes.draw do
   end
   resources :transactions, only: [:index]
   resources :btcaddresses, only: [:index, :create]
-
-  get '/users/:id/account', to: 'accounts#index'
 end
