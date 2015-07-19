@@ -69096,3 +69096,254 @@ ArgumentError (unknown keyword: mfa_uri):
   Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/corey/.gem/ruby/2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (30.3ms)
+
+
+Started PUT "/friendships/38/console/repl_sessions/4b7aa71fa3fb0c3b4124ad011190c2ec" for ::1 at 2015-07-18 22:29:26 -0400
+
+
+Started GET "/transactions" for ::1 at 2015-07-18 22:29:37 -0400
+Processing by TransactionsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered transactions/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 4350ms (Views: 298.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/transactions" for ::1 at 2015-07-18 22:29:41 -0400
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered transactions/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 3819ms (Views: 157.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-18 22:31:19 -0400
+Processing by HomesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mBtcaddress Load (0.4ms)[0m  [1mSELECT  "btcaddresses".* FROM "btcaddresses" WHERE "btcaddresses"."user_id" = $1  ORDER BY "btcaddresses"."id" ASC LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mFriendship Load (0.4ms)[0m  SELECT "friendships".* FROM "friendships" WHERE "friendships"."user_id" = $1  [["user_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered homes/_authorized_index.html.erb (14.5ms)
+  Rendered homes/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 190ms (Views: 167.4ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/friendships/38/transactions/new" for ::1 at 2015-07-18 22:31:22 -0400
+Processing by TransactionsController#new as HTML
+  Parameters: {"friendship_id"=>"38"}
+  [1m[35mFriendship Load (0.4ms)[0m  SELECT  "friendships".* FROM "friendships" WHERE "friendships"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered transactions/new.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 180ms (Views: 167.5ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/friendships/38/transactions" for ::1 at 2015-07-18 22:31:29 -0400
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d2cGVpTzAdrkZC+yKf7Ps7LsqATVjH26VFaRRGY5ZAsCGKSWFDo0EKrU8jn59E+gy7JFMyfboH6Tbu86vlgCXg==", "transaction"=>{"amount"=>"37000", "passphrase"=>"eucibous"}, "commit"=>"Submit", "friendship_id"=>"38"}
+  [1m[36mFriendship Load (0.4ms)[0m  [1mSELECT  "friendships".* FROM "friendships" WHERE "friendships"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mBtcaddress Load (0.5ms)[0m  [1mSELECT  "btcaddresses".* FROM "btcaddresses" WHERE "btcaddresses"."user_id" = $1  ORDER BY created_at DESC LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mBtcaddress Load (0.5ms)[0m  [1mSELECT  "btcaddresses".* FROM "btcaddresses" WHERE "btcaddresses"."user_id" = $1  ORDER BY created_at DESC LIMIT 1[0m  [["user_id", 5]]
+  [1m[35mBtcaddress Load (0.5ms)[0m  SELECT  "btcaddresses".* FROM "btcaddresses" WHERE "btcaddresses"."id" = $1 LIMIT 1  [["id", 3]]
+Unpermitted parameter: passphrase
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "transactions" ("amount", "sender_address_id", "recipient_address_id", "friendship_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount", 37000], ["sender_address_id", 2], ["recipient_address_id", 3], ["friendship_id", 38], ["created_at", "2015-07-19 02:31:36.287654"], ["updated_at", "2015-07-19 02:31:36.287654"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to https://my.gem.co/auth/XSU6y3DKKIsU2rjrlUxfQQ
+Completed 302 Found in 6413ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-18 22:32:26 -0400
+Processing by HomesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mBtcaddress Load (0.5ms)[0m  [1mSELECT  "btcaddresses".* FROM "btcaddresses" WHERE "btcaddresses"."user_id" = $1  ORDER BY "btcaddresses"."id" ASC LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mFriendship Load (0.4ms)[0m  SELECT "friendships".* FROM "friendships" WHERE "friendships"."user_id" = $1  [["user_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered homes/_authorized_index.html.erb (6.7ms)
+  Rendered homes/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 183ms (Views: 177.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/account" for ::1 at 2015-07-18 22:32:31 -0400
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered accounts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5004ms (Views: 162.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/account" for ::1 at 2015-07-18 22:32:36 -0400
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered accounts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4713ms (Views: 171.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-07-18 22:32:54 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kiFa3+lMkpUcnq6iZJQw9RhjTfV+VUHCNwEQaSFRMd3nXvgfaYWnX1Iucym0nrDmYT2gwowCnAbwOW4X+TBXiA=="}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-18 22:32:54 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/_unauthorized_index.html.erb (57.2ms)
+  Rendered homes/index.html.erb within layouts/application (67.1ms)
+Completed 200 OK in 228ms (Views: 223.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-18 22:32:55 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 616ms (Views: 376.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-07-18 22:33:00 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w4+JSqsmWs4YbP0EYW9JIkYMFuy2/dx5cTe19tgfJaRzXYPNLXzDh0/8DVaQkW6++neG93xICfgl+Tb/N3n8wA==", "user"=>{"email"=>"csoreff@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "csoreff@gmail.com"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["last_sign_in_at", "2015-07-19 00:59:55.973943"], ["current_sign_in_at", "2015-07-19 02:33:01.027116"], ["sign_in_count", 5], ["updated_at", "2015-07-19 02:33:01.029293"], ["id", 5]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 138ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-18 22:33:01 -0400
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mBtcaddress Load (0.4ms)[0m  SELECT  "btcaddresses".* FROM "btcaddresses" WHERE "btcaddresses"."user_id" = $1  ORDER BY "btcaddresses"."id" ASC LIMIT 1  [["user_id", 5]]
+  [1m[36mFriendship Load (0.5ms)[0m  [1mSELECT "friendships".* FROM "friendships" WHERE "friendships"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered homes/_authorized_index.html.erb (4.8ms)
+  Rendered homes/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 178ms (Views: 172.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/account" for ::1 at 2015-07-18 22:33:05 -0400
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered accounts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4863ms (Views: 170.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/account" for ::1 at 2015-07-18 22:33:10 -0400
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered accounts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4625ms (Views: 161.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/account" for ::1 at 2015-07-18 22:34:29 -0400
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered accounts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5012ms (Views: 179.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-3a70c33415df85aa5d363fed121a352a83cbb1ece440713bf874d4637a995c9f.css?body=1" for ::1 at 2015-07-18 22:34:34 -0400
+
+
+Started GET "/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/application.self-4f22ee513bff51c07ddbacea6716b3bb025259c40c0c44f68b3b024ed0ff7a2c.css?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/friendships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/index.self-d14807259878df9250c26f4d4367af28d772eb018fa015159547575c21bb627e.css?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/friendships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/scripts.self-81392028d3f01780e30b511e9ef260f5d1c2b9da94f23bb7ec04f918a1f400d5.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/application.self-1509cb3433bf7f60a75710bd4d8561d25423676b3c4d4a21914940bf07b8869a.js?body=1" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/assets/favicon-0f823e52d8b7724a2e13e03bb544cc507934122fdf647477f86bb601bac5661c.ico" for ::1 at 2015-07-18 22:34:35 -0400
+
+
+Started GET "/" for ::1 at 2015-07-19 01:36:32 -0400
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mBtcaddress Load (0.7ms)[0m  SELECT  "btcaddresses".* FROM "btcaddresses" WHERE "btcaddresses"."user_id" = $1  ORDER BY "btcaddresses"."id" ASC LIMIT 1  [["user_id", 5]]
+  [1m[36mFriendship Load (0.6ms)[0m  [1mSELECT "friendships".* FROM "friendships" WHERE "friendships"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered homes/_authorized_index.html.erb (7.0ms)
+  Rendered homes/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 411ms (Views: 404.0ms | ActiveRecord: 2.8ms)
