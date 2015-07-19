@@ -1,4 +1,7 @@
 class TransactionsController < ApplicationController
+  def index
+    @transactions = current_user.get_transactions
+  end
 
   def new
     @friendship = Friendship.find(params[:friendship_id])
@@ -6,21 +9,25 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    current_user.authenticate_user
     @friendship = Friendship.find(params[:friendship_id])
-    params[:transaction][:sender_address_id] = current_user.btcaddresses.first
+    params[:transaction][:sender_address_id] =
+      current_user.btcaddresses.order('created_at DESC').first.id
     params[:transaction][:recipient_address_id] =
-    amount = params[:transaction][:amount]
-    @transaction = @friendship.transactions.new(transaction_params)
-
-    # @friendship = current_user.friendships.build(friend_id: params[:friend_id])
-    # if @friendship.save
-    #   flash[:notice] = "Friend added."
-    #   redirect_to root_url
-    # else
-    #   flash[:error] = "Unable to add friend."
-    #   redirect_to root_url
-    # end
+      @friendship.friend.btcaddresses.order('created_at DESC').first.id
+    friend_address = Btcaddress.find(
+      params[:transaction][:recipient_address_id]
+    ).address
+    new_transaction = current_user.make_btc_payment(
+      params[:transaction][:passphrase],
+      friend_address,
+      params[:transaction][:amount]
+    )
+    if new_transaction.mfa_uri
+      @friendship.transactions.create(transaction_params)
+      redirect_to new_transaction.mfa_uri
+    else
+      redirect_to root_path, alert: "Payment unsuccessful!"
+    end
   end
 
   protected

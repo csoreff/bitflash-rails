@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>Value</th>
+    <th>Type</th>
+    <th>Status</th>
+    <th>Address</th>
+  </tr>
+  <% @transactions.each do |transaction| %>
+    <tr>
+      <td><%= transaction.value %></td>
+      <td><%= transaction.type %></td>
+      <td><%= transaction.status %></td>
+    </tr>
+  <% end %>
+</table>

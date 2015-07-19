@@ -1,4 +1,6 @@
 class Transaction < ActiveRecord::Base
+  attr_accessor :passphrase
+
   belongs_to :friendship
 
   validates :friendship_id, presence: true, numericality: true

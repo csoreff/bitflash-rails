@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  def authenticate_user
+  def authenticate_user(account_type='default')
     client = Round.client
     client.authenticate_identify(api_token: ENV['ROUND_API_TOKEN'])
     authenticated_user = client.authenticate_device(
@@ -19,11 +19,11 @@ class User < ActiveRecord::Base
       device_token: device_token,
       email: email
     )
-    authenticated_user.wallet.accounts['default']
+    authenticated_user.wallet.accounts[account_type]
   end
 
-  def create_new_address
-    new_address = authenticate_user.addresses.create
+  def create_new_address(account_type='default')
+    new_address = authenticate_user(account_type).addresses.create
     new_address.string
   end
 
@@ -31,10 +31,23 @@ class User < ActiveRecord::Base
     balance
   end
 
-  def make_payment(passphrase, payee_address, amount)
-    wallet.unlock(passphrase)
+  def make_btc_payment(passphrase, payee_address, amount)
+    authenticated_user = authenticate_user
+    authenticated_user.wallet.unlock(passphrase)
+    transaction = authenticated_user.pay([{address: payee_address,
+      amount: amount.to_i}], 1, 'http://bitflash.herokuapp.com')
+  end
+
+  # make_doge_payment for testing purposes only
+  def make_doge_payment(passphrase, payee_address, amount)
+    authenticated_user = authenticate_user
+    authenticated_user('doge').wallet.unlock(passphrase)
     transaction = pay([{address: payee_address,
-      amount: amount}], 1, 'bitflash.herokuapp.com')
+      amount: amount}], 1, 'http://bitflash.herokuapp.com')
+  end
+
+  def get_transactions
+    authenticate_user.transactions
   end
 
   def name
