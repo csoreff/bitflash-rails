@@ -24,7 +24,7 @@ feature 'user registers', %{
 
     click_button 'Sign up'
 
-    expect(page).to have_content('Welcome! You have signed up successfully.')
+    expect(page).to have_content('Welcome! Please check your email to confirm your account.')
     expect(page).to have_content('Sign Out')
   end
 
