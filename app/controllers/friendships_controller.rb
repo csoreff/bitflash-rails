@@ -1,14 +1,4 @@
 class FriendshipsController < ApplicationController
-
-  def new
-  end
-
-  def index
-    # unless params[:search].empty?
-    #   @search_result = User.where("email LIKE ?", "%#{params[:search]}%").first
-    # end
-  end
-
   def create
     friend = User.find_by(email: params[:email])
     if friend
@@ -31,9 +21,5 @@ class FriendshipsController < ApplicationController
     @friendship.destroy
     flash[:notice] = "Removed friend."
     redirect_to root_path
-  end
-
-  def payment
-
   end
 end

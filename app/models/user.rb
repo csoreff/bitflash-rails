@@ -53,4 +53,10 @@ class User < ActiveRecord::Base
   def name
     "#{first_name} #{last_name}"
   end
+
+  def non_confirmed_rescue
+    rescue
+      @friendships = current_user.friendships
+      flash[:notice] = 'Please check your email inbox to confirm your account and complete setup.'
+  end
 end

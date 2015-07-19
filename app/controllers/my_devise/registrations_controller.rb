@@ -12,7 +12,7 @@ class MyDevise::RegistrationsController < Devise::RegistrationsController
     )
     # Keep original functionality of RegistrationsController
     super
-    flash[:notice] = 'Welcome! Please check your email to confirm your account.'
+    flash[:notice] = 'Please check your email inbox to confirm your account and complete setup.'
   rescue StandardError
     flash[:warning] = 'You were not registered successfully, please ensure
       all information is correct and that you have not previously registered

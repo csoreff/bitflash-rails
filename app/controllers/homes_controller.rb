@@ -1,12 +1,15 @@
 class HomesController < ApplicationController
   def index
     if user_signed_in?
-      if current_user.btcaddresses.first.nil? && current_user.authenticate_user
+      if current_user.btcaddresses.empty? && current_user.authenticate_user
         current_user.btcaddresses.create(
           address: current_user.create_new_address
         )
       end
       @friendships = current_user.friendships
     end
+  rescue
+    @friendships = current_user.friendships
+    flash[:notice] = 'Please check your email inbox to confirm your account and complete setup.'
   end
 end
