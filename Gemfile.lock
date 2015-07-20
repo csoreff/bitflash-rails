@@ -175,7 +175,7 @@ GEM
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     rotp (2.1.0)
-    round (0.8.1)
+    round (0.8.2)
       coin-op (= 0.4.3)
       http (= 0.6.0)
       patchboard (~> 0.5)
@@ -265,7 +265,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.2.1)
   rails_12factor
-  round (= 0.8.1)
+  round (= 0.8.2)
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

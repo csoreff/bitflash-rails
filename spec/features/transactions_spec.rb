@@ -22,7 +22,7 @@ feature 'User has a transaction', %{
     fill_in 'Passphrase', with: user.passphrase
     click_button 'Submit'
     page.driver.browser.switch_to.alert.accept
-    # Sleep while I get 2FA code from my phone and enter it in browser
+    # Sleep while receiving 2FA code from cell phone and enter it in browser
     uri = URI.parse(current_url)
     puts uri
     sleep 20
