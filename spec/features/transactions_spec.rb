@@ -23,8 +23,6 @@ feature 'User has a transaction', %{
     click_button 'Submit'
     page.driver.browser.switch_to.alert.accept
     # Sleep while receiving 2FA code from cell phone and enter it in browser
-    uri = URI.parse(current_url)
-    puts uri
     sleep 20
 
     expect(user.authenticate_user.pending_balance).not_to eq(0)
