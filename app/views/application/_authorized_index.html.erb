@@ -1,11 +1,11 @@
 <div class="row full-width" data-equalizer>
-  <div class="small-9 columns transactions data-equalizer-watch" role="content">
+  <div class="small-6 medium-9 large-9 columns transactions data-equalizer-watch" role="content">
     <div class="panel transactions-panel" data-equalizer-watch>
       <%= yield %>
     </div>
   </div>
 
-  <aside class="small-3 columns friends-list" data-equalizer-watch>
+  <aside class="small-6 medium-3 large-3 columns friends-list" data-equalizer-watch>
     <div class="panel friends-panel" data-equalizer-watch>
       <h5 id="friends-title">Friends</h5>
       <br>
@@ -24,10 +24,10 @@
         <div class="row collapse">
            <div class="row collapse postfix-round">
             <p>Add a New Friend</p>
-            <div class="small-9 columns">
+            <div class="small-6 medium-9 large-9 columns">
               <%= text_field_tag(:email, nil, placeholder: "Friend's Email") %>
             </div>
-            <div class="small-3 columns">
+            <div class="small-6 medium-3 large-3 columns">
               <%= submit_tag("Go", class: "button postfix") %>
             </div>
           </div>
