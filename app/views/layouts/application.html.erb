@@ -37,53 +37,7 @@
   <% end %>
 
   <% if user_signed_in? %>
-      <div class="row full-width" data-equalizer>
-        <div class="small-9 columns transactions data-equalizer-watch" role="content">
-          <div class="panel transactions-panel" data-equalizer-watch>
-            <%= yield %>
-          </div>
-        </div>
-
-        <aside class="small-3 columns friends-list" data-equalizer-watch>
-          <div class="panel friends-panel" data-equalizer-watch>
-            <h5 id="friends-title">Friends</h5>
-            <br>
-            <% @friendships.each do |friendship| %>
-              <ul class="friend-names">
-                <li><a href='#' data-dropdown="drop<%= friendship.id %>" class="friend-button"><%= friendship.friend.name unless friendship.friend.nil? %></a><li>
-              </ul>
-              <ul id="drop<%= friendship.id %>" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
-                <li><%= link_to 'Send Money', new_friendship_transaction_path(friendship)%></li>
-                <li><%= link_to 'Delete Friend', friendship_path(friendship), method: :delete, id: "delete-friend", data: { confirm: 'Are you sure?' } %></li>
-              </ul>
-            <% end %>
-            <br><br>
-            <div class="search-friend-box">
-            <%= form_tag(controller: "friendships", action: "create", method: "post") do %>
-              <div class="row collapse">
-                 <div class="row collapse postfix-round">
-                  <p>Add a New Friend</p>
-                  <div class="small-9 columns">
-                    <%= text_field_tag(:email, nil, placeholder: "Friend's Email") %>
-                  </div>
-                  <div class="small-3 columns">
-                    <%= submit_tag("Go", class: "button postfix") %>
-                  </div>
-                </div>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      </aside>
-
-      <footer class="main-footer">
-        <div class="row">
-          <div class="large-12 columns">
-              <p>Copyright BitFlash © 2015.</p>
-          </div>
-        </div>
-      </footer>
-
+    <%= render 'authorized_index' %>
   <% else %>
     <%= yield %>
   <% end %>
