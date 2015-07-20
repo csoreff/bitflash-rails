@@ -19,7 +19,7 @@
     <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
-          <li><%= link_to 'Transactions', account_path %></li>
+          <li><%= link_to 'Transactions', transactions_path %></li>
           <li><%= link_to 'Account', account_path %></li>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
         <%- else -%>
