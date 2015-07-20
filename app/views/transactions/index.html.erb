@@ -1,15 +1,19 @@
-<table class='center-forms'>
-  <tr>
-    <th>Value</th>
-    <th>Type</th>
-    <th>Status</th>
-    <th>Address</th>
-  </tr>
-  <% @transactions.each do |transaction| %>
-    <tr>
-      <td><%= transaction.value %></td>
-      <td><%= transaction.type %></td>
-      <td><%= transaction.status %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="row full-width" data-equalizer>
+  <div class="small-12 medium-12 large-12 columns transactions data-equalizer-watch" role="content">
+    <table class='center-forms'>
+      <tr>
+        <th>Value</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Address</th>
+      </tr>
+      <% @transactions.each do |transaction| %>
+        <tr>
+          <td><%= transaction.value %></td>
+          <td><%= transaction.type %></td>
+          <td><%= transaction.status %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
