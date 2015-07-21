@@ -1,5 +1,4 @@
 class MyDevise::RegistrationsController < Devise::RegistrationsController
-  require 'registration_helper'
 
   def create
     client = Round.client
