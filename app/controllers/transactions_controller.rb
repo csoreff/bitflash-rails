@@ -10,9 +10,6 @@ class TransactionsController < ApplicationController
     @friendship = Friendship.find(params[:friendship_id])
     @transaction = Transaction.new
     @balance = current_user.authenticate_user.balance
-  # rescue
-  #   flash[:notice] = 'Please check your email inbox to confirm your account and complete setup.'
-  #   redirect_to root_path
   end
 
   def create
