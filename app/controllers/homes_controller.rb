@@ -6,10 +6,10 @@ class HomesController < ApplicationController
           address: current_user.create_new_address
         )
       end
-      @friendships = current_user.friendships
+      @friendships = current_user.friendships.page params[:page]
     end
   rescue
-    @friendships = current_user.friendships
+    @friendships = current_user.friendships.page params[:page]
     flash[:notice] = 'Please check your email inbox to confirm your account and complete setup.'
   end
 end
