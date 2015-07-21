@@ -1,11 +1,9 @@
 class HomesController < ApplicationController
   def index
-    if user_signed_in?
-      if current_user.btcaddresses.empty? && current_user.authenticate_user
-        current_user.btcaddresses.create(
-          address: current_user.create_new_address
-        )
-      end
+    if user_signed_in? && current_user.btcaddresses.empty?
+      current_user.btcaddresses.create(
+        address: current_user.create_new_address
+      )
       @friendships = current_user.friendships.page params[:page]
     end
   rescue

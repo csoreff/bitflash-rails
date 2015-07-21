@@ -1,4 +1,5 @@
 class MyDevise::RegistrationsController < Devise::RegistrationsController
+
   def create
     client = Round.client
     client.authenticate_identify(api_token: ENV['ROUND_API_TOKEN'])
