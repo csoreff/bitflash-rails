@@ -1,20 +1,20 @@
 class TransactionsController < ApplicationController
   def index
-    @friendships = current_user.friendships
-    @transactions = current_user.get_transactions
+    @friendships = current_user.friendships.page params[:page]
+    @transactions = current_user.get_transactions.page params[:page]
   rescue
-    @friendships = current_user.friendships
+    @friendships = current_user.friendships.page params[:page]
     flash[:notice] = 'Please check your email inbox to confirm your account and complete setup.'
     redirect_to root_path
   end
 
   def new
-    @friendships = current_user.friendships
+    @friendships = current_user.friendships.page params[:page]
     @friendship = Friendship.find(params[:friendship_id])
     @transaction = Transaction.new
     @balance = current_user.authenticate_user.balance
   rescue
-    @friendships = current_user.friendships
+    @friendships = current_user.friendships.page params[:page]
     flash[:notice] = 'Please check your email inbox to confirm your account and complete setup.'
     redirect_to root_path
   end

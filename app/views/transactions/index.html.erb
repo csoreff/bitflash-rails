@@ -1,18 +1,23 @@
 <div class="small-12 medium-12 large-12 columns transactions data-equalizer-watch" role="content">
   <table class='center-forms transactions-panel'>
-    <tr>
-      <th>Amount</th>
-      <th>Date</th>
-      <th>Type</th>
-      <th>Address</th>
-    </tr>
-    <% @transactions.each do |transaction| %>
+    <div class="transactions-table">
       <tr>
-        <td><%= transaction.user_id == current_user.id ? transaction.amount * -1 : transaction.amount %></td>
-        <td><%= transaction.created_at %></td>
-        <td><%= transaction.user_id == current_user.id ? "Outgoing" : "Incoming" %></td>
-        <td><%= transaction.user_id == current_user.id ? Btcaddress.find(transaction.recipient_address_id).address : Btcaddress.find(transaction.sender_address_id).address %></td>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Address</th>
       </tr>
-    <% end %>
+      <% @transactions.each do |transaction| %>
+        <tr>
+          <td><%= transaction.user_id == current_user.id ? transaction.amount * -1 : transaction.amount %></td>
+          <td><%= transaction.created_at %></td>
+          <td><%= transaction.user_id == current_user.id ? "Outgoing" : "Incoming" %></td>
+          <td><%= transaction.user_id == current_user.id ? Btcaddress.find(transaction.recipient_address_id).address : Btcaddress.find(transaction.sender_address_id).address %></td>
+        </tr>
+      <% end %>
+    </div>
   </table>
+  <div class="pages">
+    <%= paginate @transactions %>
+  </div>
 </div>
