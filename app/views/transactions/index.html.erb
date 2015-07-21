@@ -12,7 +12,7 @@
           <td><%= transaction.user_id == current_user.id ? transaction.amount * -1 : transaction.amount %></td>
           <td><%= transaction.created_at %></td>
           <td><%= transaction.user_id == current_user.id ? "Outgoing" : "Incoming" %></td>
-          <td><%= Btcaddress.find(transaction.recipient_address_id).address %></td>
+          <td><%= transaction.user_id == current_user.id ? Btcaddress.find(transaction.recipient_address_id).address : Btcaddress.find(transaction.sender_address_id).address %></td>
         </tr>
       <% end %>
     </table>
