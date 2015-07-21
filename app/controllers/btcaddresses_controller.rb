@@ -1,10 +1,6 @@
 class BtcaddressesController < ApplicationController
   def index
     @btcaddresses = current_user.btcaddresses.order(created_at: :desc).page params[:page]
-  # rescue
-  #   @friendships = current_user.friendships.page params[:page]
-  #   flash[:notice] = 'Please check your email inbox to confirm your account and complete setup.'
-  #   redirect_to root_path
   end
 
   def create
