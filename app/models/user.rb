@@ -48,7 +48,11 @@ class User < ActiveRecord::Base
   # end
 
   def get_transactions
-    transactions.order(created_at: :desc)
+    Transaction.where(
+      Transaction.arel_table[:user_id].in(id).or(
+        Transaction.arel_table[:recipient_id].in(id)
+      )
+    ).order(created_at: :desc)
   end
 
   def create_transaction(params)
