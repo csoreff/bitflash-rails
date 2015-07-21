@@ -2,14 +2,17 @@
   <div class="small-12 medium-12 large-12 columns transactions data-equalizer-watch" role="content">
     <table class='center-forms'>
       <tr>
-        <th>Value</th>
+        <th>Amount</th>
+        <th>Date</th>
         <th>Type</th>
-        <th>Status</th>
         <th>Address</th>
       </tr>
       <% @transactions.each do |transaction| %>
         <tr>
-          <td><%= transaction.amount %></td>
+          <td><%= transaction.user_id == current_user.id ? transaction.amount * -1 : transaction.amount %></td>
+          <td><%= transaction.created_at %></td>
+          <td><%= transaction.user_id == current_user.id ? "Outgoing" : "Incoming" %></td>
+          <td><%= Btcaddress.find(transaction.recipient_address_id).address %></td>
         </tr>
       <% end %>
     </table>

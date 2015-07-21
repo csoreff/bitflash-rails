@@ -48,11 +48,7 @@ class User < ActiveRecord::Base
   # end
 
   def get_transactions
-    transaction_list = []
-    transactions.find_each do |transaction|
-      transaction_list << transaction
-    end
-    transaction_list
+    transactions.order(created_at: :desc)
   end
 
   def create_transaction(params)

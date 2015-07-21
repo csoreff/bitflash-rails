@@ -1,6 +1,5 @@
 class TransactionsController < ApplicationController
   def index
-    binding.pry
     @friendships = current_user.friendships
     @transactions = current_user.get_transactions
   rescue
