@@ -39,14 +39,6 @@ class User < ActiveRecord::Base
       amount: amount.to_i}], 1, 'https://bitflash.herokuapp.com')
   end
 
-  # make_doge_payment for testing purposes only
-  # def make_doge_payment(passphrase, payee_address, amount)
-  #   authenticated_user = authenticate_user('doge')
-  #   authenticated_user.wallet.unlock(passphrase)
-  #   transaction = authenticated_user.pay([{address: payee_address,
-  #     amount: amount.to_i}], 1, 'https://bitflash.herokuapp.com')
-  # end
-
   def get_transactions
     Transaction.where(
       Transaction.arel_table[:user_id].in(id).or(
