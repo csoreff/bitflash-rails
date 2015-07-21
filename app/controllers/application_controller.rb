@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
   before_action :get_friends
   around_action :rescue_unconfirmed_users
 
-
   def get_friends
     if user_signed_in?
       @friendships = current_user.friendships.page params[:page]
