@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 
   has_many :friendships
   has_many :btcaddresses
+  has_many :transactions
   has_many :friends, :through => :friendships
 
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
@@ -47,7 +48,30 @@ class User < ActiveRecord::Base
   # end
 
   def get_transactions
-    authenticate_user.transactions
+    transaction_list = []
+    transactions.find_each do |transaction|
+      transaction_list << transaction
+    end
+    transaction_list
+  end
+
+  def create_transaction(params)
+    @friendship = Friendship.find(params[:friendship_id])
+    params[:transaction][:sender_address_id] =
+      btcaddresses.order('created_at DESC').first.id
+    params[:transaction][:recipient_address_id] =
+      @friendship.friend.btcaddresses.order('created_at DESC').first.id
+    params[:transaction][:user_id] = id
+    params[:transaction][:recipient_id] = @friendship.friend.id
+    friend_address = Btcaddress.find(
+      params[:transaction][:recipient_address_id]
+    ).address
+    new_payment = make_btc_payment(
+      params[:transaction][:passphrase],
+      friend_address,
+      params[:transaction][:amount]
+    )
+    [params, new_payment, @friendship]
   end
 
   def name

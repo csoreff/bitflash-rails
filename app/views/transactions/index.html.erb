@@ -9,9 +9,7 @@
       </tr>
       <% @transactions.each do |transaction| %>
         <tr>
-          <td><%= transaction.value %></td>
-          <td><%= transaction.type %></td>
-          <td><%= transaction.status %></td>
+          <td><%= transaction.amount %></td>
         </tr>
       <% end %>
     </table>
