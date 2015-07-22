@@ -1,2 +1,10 @@
-<p>Balance: <%= @balance %></p>
-<p>Pending: <%= @pending_balance %></p>
+<div class="small-12 medium-12 large-12 columns transactions data-equalizer-watch" role="content">
+  <ul class='center-forms transactions-panel'>
+    <div class="account-page">
+      <li><%= gravatar_tag current_user.email, size: 200 %></li>
+      <li><h5>Update your profile picture with <%= link_to 'Gravatar', 'https://en.gravatar.com/' %></h5></li>
+      <li><p>Balance: <%= @balance %></p></li>
+      <li><p>Pending: <%= @pending_balance %></p></li>
+    </div>
+  </ul>
+</div>

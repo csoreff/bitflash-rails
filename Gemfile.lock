@@ -93,6 +93,7 @@ GEM
       sass (>= 3.3.0, < 3.5)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    gravatarify (3.0.0)
     hashie (2.1.2)
     http (0.6.0)
       http_parser.rb (~> 0.6.0)
@@ -261,6 +262,7 @@ DEPENDENCIES
   factory_girl
   font-awesome-rails
   foundation-rails
+  gravatarify (~> 3.0.0)
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
