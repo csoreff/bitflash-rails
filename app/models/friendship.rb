@@ -6,5 +6,5 @@ class Friendship < ActiveRecord::Base
   validates :user_id, presence: true, numericality: true
   validates :friend_id, presence: true, numericality: true
 
-  paginates_per 6
+  paginates_per 4
 end

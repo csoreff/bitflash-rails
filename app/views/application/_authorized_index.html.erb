@@ -26,7 +26,9 @@
             <li><%= link_to 'Delete Friend', friendship_path(friendship), method: :delete, id: "delete-friend", data: { confirm: 'Are you sure?' } %></li>
           </ul>
         <% end %>
-        <%= paginate @friendships %>
+        <div class="friendship-pages">
+          <%= paginate @friendships %>
+        </div>
       </div>
       <br><br>
       <div class="search-friend-box">
