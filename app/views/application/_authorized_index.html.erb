@@ -11,9 +11,16 @@
         <h5>Friends</h5>
         <br>
         <% @friendships.each do |friendship| %>
+        <a href='#' data-options="align:left" data-dropdown="drop<%= friendship.id %>" class="friend-button">
           <ul class="friend-names">
-            <li><a href='#' data-dropdown="drop<%= friendship.id %>" class="friend-button"><%= friendship.friend.name unless friendship.friend.nil? %></a><li>
+            <table class='friends-table'>
+              <tr>
+            <li><td><%= gravatar_tag friendship.friend.email, size: 40 %></td>
+              <td><%= friendship.friend.name unless friendship.friend.nil? %></td><li>
+            </tr>
+          </table>
           </ul>
+          </a>
           <ul id="drop<%= friendship.id %>" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
             <li><%= link_to 'Send Money', new_friendship_transaction_path(friendship)%></li>
             <li><%= link_to 'Delete Friend', friendship_path(friendship), method: :delete, id: "delete-friend", data: { confirm: 'Are you sure?' } %></li>
