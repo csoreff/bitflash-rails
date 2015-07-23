@@ -8,7 +8,7 @@
     <tr id="btcaddress">
       <td><%= btcaddress.address %></td>
       <td><%= btcaddress.created_at %></td>
-      <td><img alt="Incorrect QR code input" src="http://www.btcfrog.com/qr/bitcoinPNG.php?address=<%= btcaddress.address %>&error=H" style="height: 150px;width 150px" />
+      <td><%=image_tag("http://www.btcfrog.com/qr/bitcoinPNG.php?address=#{btcaddress.address}&error=H", size: "150x150", alt: "Incorrect QR code input")%></td>
     </tr>
   <% end %>
 </table>
