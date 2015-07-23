@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :friendships, only: [:index, :create, :destroy] do
     resources :transactions, only: [:new, :create]
   end
+
   resources :transactions, only: [:index]
   resources :btcaddresses, only: [:index, :create]
 end

@@ -1,5 +1,7 @@
 <% if user_signed_in? %>
-  <h2 class="index-quote">“I do think Bitcoin is the first digital currency that has the potential to do something like change the world." </br></br>- Peter Thiel</h2>
+  <div class="chart">
+    <iframe frameBorder="0" scrolling="no" src="https://www.bigterminal.com/embed/chart-widget/?&color=0cd1aa&series=coinbaseBTCUSD&sub_id=hymO5MZ" width="950" height="500"></iframe>
+  </div>
 <% else %>
   <%= render 'unauthorized_index' %>
 <% end %>
