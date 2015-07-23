@@ -2,11 +2,13 @@
   <tr>
     <th>Address</th>
     <th>Date Created</th>
+    <th>QR Code</th>
   </tr>
   <% @btcaddresses.each do |btcaddress| %>
     <tr id="btcaddress">
       <td><%= btcaddress.address %></td>
       <td><%= btcaddress.created_at %></td>
+      <td><img alt="Incorrect QR code input" src="http://www.btcfrog.com/qr/bitcoinPNG.php?address=<%= btcaddress.address %>&error=H" style="height: 150px;width 150px" />
     </tr>
   <% end %>
 </table>

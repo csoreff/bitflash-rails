@@ -4,5 +4,5 @@ class Btcaddress < ActiveRecord::Base
   validates :user_id, presence: true
   validates :address, presence: true
 
-  paginates_per 5
+  paginates_per 2
 end
