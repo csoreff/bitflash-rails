@@ -9,8 +9,9 @@
       </div>
     <%- end -%>
     <p>You are sending money to: <%= @friendship.friend.name%></p>
+    <p>Current BTC price: <%= @btc_price %></p>
     <%= f.label :amount %>
-    <%= f.number_field :amount %>
+    <%= f.number_field :amount, step: 'any' %>
     <%= f.label :passphrase %>
     <%= f.text_field :passphrase %><br>
 

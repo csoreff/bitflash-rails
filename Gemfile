@@ -13,6 +13,7 @@ gem 'foundation-rails'
 gem "font-awesome-rails"
 gem 'kaminari'
 gem 'gravatarify', '~> 3.0.0'
+gem 'httparty'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

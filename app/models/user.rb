@@ -29,7 +29,11 @@ class User < ActiveRecord::Base
   end
 
   def get_balance
-    balance
+    authenticated_user = authenticate_user
+    {
+      balance: authenticated_user.balance.to_f / 100_000_000.to_f,
+      pending_balance: authenticated_user.pending_balance.to_f / 100_000_000.to_f
+    }
   end
 
   def make_btc_payment(passphrase, payee_address, amount)
@@ -58,6 +62,8 @@ class User < ActiveRecord::Base
     friend_address = Btcaddress.find(
       params[:transaction][:recipient_address_id]
     ).address
+    params[:transaction][:amount] =
+      params[:transaction][:amount].to_f * 100_000_000.to_f
     new_payment = make_btc_payment(
       params[:transaction][:passphrase],
       friend_address,
