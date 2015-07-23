@@ -1,5 +1,5 @@
 <div class="devise-forms">
-  <p>Your balance is: <%= @balance %></p>
+  <p>Your available balance is: <%= @balance %></p>
   <%= form_for([@friendship, @transaction]) do |f| %>
     <% if @transaction.errors.present? %>
       <div data-alert class="alert-box alert round text-center">

@@ -10,7 +10,7 @@ class TransactionsController < ApplicationController
     @btc_price = HTTParty.get('https://www.bitstamp.net/api/ticker/')['last']
     @friendship = Friendship.find(params[:friendship_id])
     @transaction = Transaction.new
-    @balance = current_user.get_balance
+    @balance = current_user.get_balance[:balance]
   end
 
   def create
