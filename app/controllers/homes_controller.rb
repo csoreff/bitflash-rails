@@ -1,5 +1,6 @@
 class HomesController < ApplicationController
   def index
+    binding.pry
     if user_signed_in? && current_user.btcaddresses.empty?
       current_user.btcaddresses.create(
         address: current_user.create_new_address

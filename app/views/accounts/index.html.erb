@@ -1,23 +1,22 @@
 <div class="small-12 medium-12 large-12 columns transactions data-equalizer-watch" role="content">
-      <div class='round-image account-padding'>
-        <%= gravatar_tag current_user.email, size: 200%>
-      </div>
-      <h5 class='account-padding'>Update your profile picture with <%= link_to 'Gravatar', 'https://en.gravatar.com/' %></h5>
-      <table class="centered-item account-padding">
-        <tbody>
-          <tr>
-            <td>Balance:</td>
-            <td><%= @balance %></td>
-          </tr>
-          <tr>
-            <td>Pending:</td>
-            <td><%= @pending_balance %></td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="account-padding">
-        <%= link_to 'Change Password', edit_user_password_path, class: 'button' %>
-        <%= link_to 'Withdraw/Send Funds', edit_user_password_path, class: 'button' %>
-      </div>
-
+  <div class='round-image account-padding'>
+    <%= gravatar_tag current_user.email, size: 200%>
+  </div>
+  <h5 class='account-padding'>Update your profile picture with <%= link_to 'Gravatar', 'https://en.gravatar.com/' %></h5>
+  <table class="centered-item account-padding">
+    <tbody>
+      <tr>
+        <td>Balance:</td>
+        <td><%= @balance %></td>
+      </tr>
+      <tr>
+        <td>Pending:</td>
+        <td><%= @pending_balance %></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="account-padding">
+    <%= link_to 'Change Password', edit_user_password_path, class: 'button' %>
+    <%= link_to 'Withdraw/Send Funds', account_withdraw_path, class: 'button' %>
+  </div>
 </div>
