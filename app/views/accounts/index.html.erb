@@ -6,17 +6,17 @@
   <table class="centered-item account-padding">
     <tbody>
       <tr>
-        <td>Balance:</td>
-        <td><%= @balance %></td>
+        <td><h5>Balance:</h5></td>
+        <td><h5><%= @balance %></h5></td>
       </tr>
       <tr>
-        <td>Pending:</td>
-        <td><%= @pending_balance %></td>
+        <td><h5>Pending:</h5></td>
+        <td><h5><%= @pending_balance %></h5></td>
       </tr>
     </tbody>
   </table>
   <div class="account-padding">
-    <%= link_to 'Change Password', edit_user_password_path, class: 'button' %>
-    <%= link_to 'Withdraw/Send Funds', account_withdraw_path, class: 'button' %>
+    <%= link_to 'Change Password', edit_user_password_path, class: 'button submit-button' %>
+    <%= link_to 'Withdraw/Send Funds', account_withdraw_path, class: 'button submit-button' %>
   </div>
 </div>

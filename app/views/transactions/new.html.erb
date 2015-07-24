@@ -10,11 +10,11 @@
     <%- end -%>
     <p>You are sending money to: <%= @friendship.friend.name%></p>
     <p>Current BTC price: $<%= @btc_price %></p>
-    <%= f.label :amount %>
+    <%= f.label :amount, 'Amount (in btc)' %>
     <%= f.number_field :amount, step: 'any' %>
     <%= f.label :passphrase %>
     <%= f.text_field :passphrase %><br>
 
-    <%= f.submit "Submit", data: { confirm: 'Are you sure?' } %>
+    <%= f.submit "Submit", class: 'button submit-button', data: { confirm: 'Are you sure?' } %>
   <% end %>
 </div>

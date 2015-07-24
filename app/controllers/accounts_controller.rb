@@ -6,8 +6,6 @@ class AccountsController < ApplicationController
 
   def new
     @btc_price = HTTParty.get('https://www.bitstamp.net/api/ticker/')['last']
-    @friendship = Friendship.find(1)
-    @transaction = Transaction.new
     @balance = current_user.get_balance[:balance]
   end
 
