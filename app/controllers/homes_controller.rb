@@ -4,7 +4,6 @@ class HomesController < ApplicationController
       current_user.btcaddresses.create(
         address: current_user.create_new_address
       )
-      @friendships = current_user.friendships.page params[:page]
     end
   rescue
     @friendships = current_user.friendships.page params[:page]
