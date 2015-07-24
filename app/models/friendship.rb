@@ -5,6 +5,7 @@ class Friendship < ActiveRecord::Base
 
   validates :user_id, presence: true, numericality: true
   validates :friend_id, presence: true, numericality: true
+  validates_uniqueness_of :user_id, :scope => :friend_id
 
   paginates_per 4
 end
