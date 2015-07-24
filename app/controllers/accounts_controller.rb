@@ -10,10 +10,10 @@ class AccountsController < ApplicationController
   end
 
   def create
-    amount = params[:transaction][:amount].to_f * 100_000_000.to_f
-    new_transaction = make_btc_payment(
-      params[:transaction][:passphrase],
-      params[:transaction][:btcaddress],
+    amount = params[:amount].to_f * 100_000_000.to_f
+    new_transaction = current_user.make_btc_payment(
+      params[:passphrase],
+      params[:btcaddress],
       amount
     )
     if new_transaction.mfa_uri

@@ -1,10 +1,10 @@
 <div class="devise-forms">
   <p>Your available balance is: <%= @balance %></p>
   <%= form_tag do %>
-    <p>Withdraw your Bitcoin or send to an outside address:</p>
     <p>Current BTC price: $<%= @btc_price %></p>
+    <p>Withdraw your Bitcoin or send to an outside address:</p>
     <%= label_tag(:amount, 'Amount (in btc)') %>
-    <%= number_field(:amount, step: 'any') %>
+    <%= number_field_tag(:amount, nil, step: 'any') %>
     <%= label_tag(:btcaddress, 'Bitcoin Address') %>
     <%= text_field_tag(:btcaddress) %>
     <%= label_tag(:passphrase) %>

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'homes#index'
   get '/account', to: 'accounts#index'
   get '/account/withdraw', to: 'accounts#new'
-  post '/account/withdraw', to: 'accounts#create'
+  post "/account/withdraw", to: "accounts#create"
 
   devise_for :users,
              :controllers => { registrations: "my_devise/registrations"}
