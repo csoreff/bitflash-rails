@@ -56,12 +56,10 @@ $(document).ready(function() {
         heights[index] = heights[index] || 0;
         if (height > heights[index]) heights[index] = height;
       });
-
     });
 
     tr_copy.each(function (index) {
       $(this).height(heights[index]);
     });
   }
-
 });

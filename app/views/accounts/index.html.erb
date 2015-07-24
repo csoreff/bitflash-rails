@@ -5,6 +5,7 @@
       <li><h5>Update your profile picture with <%= link_to 'Gravatar', 'https://en.gravatar.com/' %></h5></li>
       <li><p>Balance: <%= @balance %></p></li>
       <li><p>Pending: <%= @pending_balance %></p></li>
+      <li><%= link_to 'Change Password', edit_user_password_path %></li>
     </div>
   </ul>
 </div>
