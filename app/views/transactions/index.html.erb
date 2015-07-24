@@ -1,6 +1,5 @@
 <div class="small-12 medium-12 large-12 columns transactions data-equalizer-watch" role="content">
   <table class='center-forms transactions-panel responsive'>
-    <div class="transactions-table">
       <tr>
         <th>Amount</th>
         <th>Date</th>
@@ -15,7 +14,6 @@
           <td><%= transaction.user_id == current_user.id ? Btcaddress.find(transaction.recipient_address_id).address : Btcaddress.find(transaction.sender_address_id).address %></td>
         </tr>
       <% end %>
-    </div>
   </table>
   <div class="pages">
     <%= paginate @transactions %>

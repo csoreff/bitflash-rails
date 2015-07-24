@@ -1,6 +1,7 @@
 class BtcaddressesController < ApplicationController
   def index
     @btcaddresses = current_user.btcaddresses.order(created_at: :desc).page params[:page]
+    redirect_to root_path if current_user.btcaddresses.empty?
   end
 
   def create
