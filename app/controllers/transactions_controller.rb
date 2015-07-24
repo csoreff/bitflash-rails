@@ -1,10 +1,11 @@
 class TransactionsController < ApplicationController
   def index
-    @transactions = current_user.get_transactions.page params[:page]
-    redirect_to root_path if current_user.btcaddresses.empty?
-  rescue
-    flash[:notice] = 'Please check your email inbox to confirm your account and complete setup.'
-    redirect_to root_path
+    if current_user.get_transactions.empty?
+      flash[:notice] = "You have no transactions yet."
+      redirect_to root_path
+    else
+      @transactions = current_user.get_transactions.page params[:page]
+    end
   end
 
   def new
