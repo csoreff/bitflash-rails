@@ -8,6 +8,8 @@ class Transaction < ActiveRecord::Base
   validates :sender_address_id, presence: true, numericality: true
   validates :amount, presence: true, numericality: true
   validates :recipient_address_id, presence: true, numericality: true
+  validates :user_id, presence: true, numericality: true
+  validates :recipient_id, presence: true, numericality: true
 
   paginates_per 5
 end
