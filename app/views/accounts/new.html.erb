@@ -1,0 +1,22 @@
+<div class="devise-forms">
+  <p>Your available balance is: <%= @balance %></p>
+  <%= form_for([@friendship, @transaction]) do |f| %>
+    <% if @transaction.errors.present? %>
+      <div data-alert class="alert-box alert round text-center">
+        <%- @review.errors.full_messages.each do |error| -%>
+          <%= error %><br>
+        <%- end -%>
+      </div>
+    <%- end -%>
+    <p>Withdraw your Bitcoin or send to an outside address:</p>
+    <p>Current BTC price: $<%= @btc_price %></p>
+    <%= f.label :amount %>
+    <%= f.number_field :amount, step: 'any' %>
+    <%= f.label :btcaddress %>
+    <%= f.text_field 'Bitcoin Address', :btcaddress %>
+    <%= f.label :passphrase %>
+    <%= f.text_field :passphrase %><br>
+
+    <%= f.submit "Submit", data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</div>
