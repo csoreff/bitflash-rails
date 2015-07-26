@@ -1,16 +1,20 @@
 <table class="addresses-table responsive">
-  <tr>
-    <th>Address</th>
-    <th>Date Created</th>
-    <th>QR Code</th>
-  </tr>
-  <% @btcaddresses.each do |btcaddress| %>
-    <tr id="btcaddress">
-      <td><%= btcaddress.address %></td>
-      <td><%= btcaddress.created_at %></td>
-      <td><%=image_tag("http://www.btcfrog.com/qr/bitcoinPNG.php?address=#{btcaddress.address}&error=H", size: "150x150", alt: "Incorrect QR code input")%></td>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Date Created</th>
+      <th>QR Code</th>
     </tr>
-  <% end %>
+  </thead>
+  <tdbody>
+    <% @btcaddresses.each do |btcaddress| %>
+      <tr id="btcaddress">
+        <td><%= btcaddress.address %></td>
+        <td><%= btcaddress.created_at %></td>
+        <td><%=image_tag("http://www.btcfrog.com/qr/bitcoinPNG.php?address=#{btcaddress.address}&error=H", size: "150x150", alt: "Incorrect QR code input")%></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 <%= paginate @btcaddresses %>
 <br>
