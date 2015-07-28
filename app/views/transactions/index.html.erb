@@ -10,10 +10,10 @@
   <tbody>
     <% @transactions.each do |transaction| %>
       <tr id='btcaddress'>
-        <td><%= transaction.user_id == current_user.id ? transaction.amount * -1 : transaction.amount %></td>
+        <td><%= transaction_amount(transaction) %></td>
         <td><%= transaction.created_at %></td>
-        <td><%= transaction.user_id == current_user.id ? "Outgoing" : "Incoming" %></td>
-        <td><%= transaction.user_id == current_user.id ? Btcaddress.find(transaction.recipient_address_id).address : Btcaddress.find(transaction.sender_address_id).address %></td>
+        <td><%= incoming_or_outgoing?(transaction) %></td>
+        <td><%= get_btc_address(transaction) %></td>
       </tr>
     <% end %>
   </tbody>
