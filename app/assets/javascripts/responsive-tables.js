@@ -54,7 +54,9 @@ $(document).ready(function() {
       tx.each(function () {
         var height = $(this).outerHeight(true);
         heights[index] = heights[index] || 0;
-        if (height > heights[index]) heights[index] = height;
+        if (height > heights[index]) {
+          heights[index] = height;
+        }
       });
     });
 
