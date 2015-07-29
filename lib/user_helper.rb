@@ -1,7 +1,6 @@
 module UserHelper
   class NewUser
     def self.register_new_user(params)
-      binding.pry
       client = Round.client
       client.authenticate_identify(api_token: ENV['ROUND_API_TOKEN'])
       params[:user][:device_token] = client.users.create(
