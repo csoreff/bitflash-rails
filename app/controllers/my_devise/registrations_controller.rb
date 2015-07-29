@@ -1,16 +1,8 @@
 class MyDevise::RegistrationsController < Devise::RegistrationsController
+  require 'user_helper'
 
   def create
-    client = Round.client
-    client.authenticate_identify(api_token: ENV['ROUND_API_TOKEN'])
-    params[:user][:device_token] = client.users.create(
-      first_name: params[:user][:first_name],
-      last_name: params[:user][:last_name],
-      email: params[:user][:email],
-      passphrase: params[:user][:passphrase],
-      device_name: "device#{rand(99999)}",
-      redirect_uri: 'https://bitflash.herokuapp.com'
-    )
+    params[:user][:device_token] = UserHelper::NewUser.register_new_user(params)
     # Keep original functionality of RegistrationsController
     super
     flash[:notice] = 'Please check your email inbox to confirm your account and complete setup.'
