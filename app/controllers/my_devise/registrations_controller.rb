@@ -1,5 +1,6 @@
 class MyDevise::RegistrationsController < Devise::RegistrationsController
   require 'user_helper'
+
   def create
     params[:user][:device_token] = UserHelper::NewUser.register_new_user(params)
     # Keep original functionality of RegistrationsController
