@@ -53,23 +53,28 @@ class User < ActiveRecord::Base
 
   def create_transaction(params)
     @friendship = Friendship.find(params[:friendship_id])
-    params[:transaction][:sender_address_id] =
-      btcaddresses.order('created_at DESC').first.id
-    params[:transaction][:recipient_address_id] =
-      @friendship.friend.btcaddresses.order('created_at DESC').first.id
-    params[:transaction][:user_id] = id
-    params[:transaction][:recipient_id] = @friendship.friend.id
+    params = transaction_info(@friendship, params)
     friend_address = Btcaddress.find(
       params[:transaction][:recipient_address_id]
     ).address
-    params[:transaction][:amount] =
-      params[:transaction][:amount].to_f * 100_000_000.to_f
     new_payment = make_btc_payment(
       params[:transaction][:passphrase],
       friend_address,
       params[:transaction][:amount]
     )
     [params, new_payment, @friendship]
+  end
+
+  def transaction_info(friendship, params)
+    params[:transaction][:sender_address_id] =
+      btcaddresses.order('created_at DESC').first.id
+    params[:transaction][:recipient_address_id] =
+      friendship.friend.btcaddresses.order('created_at DESC').first.id
+    params[:transaction][:user_id] = id
+    params[:transaction][:recipient_id] = friendship.friend.id
+    params[:transaction][:amount] =
+      params[:transaction][:amount].to_f * 100_000_000.to_f
+    params
   end
 
   def name
