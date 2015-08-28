@@ -1,7 +1,7 @@
 class TransactionsController < ApplicationController
   def index
     if current_user.get_transactions.empty?
-      flash[:notice] = "You have no transactions yet."
+      flash[:notice] = 'You have no transactions yet.'
       redirect_to root_path
     else
       @transactions = current_user.get_transactions.page params[:page]
@@ -22,7 +22,7 @@ class TransactionsController < ApplicationController
       new_transaction[2].transactions.create(transaction_params)
       redirect_to new_transaction[1].mfa_uri
     else
-      redirect_to root_path, alert: "Payment unsuccessful!"
+      redirect_to root_path, alert: 'Payment unsuccessful!'
     end
   end
 

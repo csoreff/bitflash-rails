@@ -19,7 +19,7 @@ class AccountsController < ApplicationController
     if new_transaction.mfa_uri
       redirect_to new_transaction.mfa_uri
     else
-      redirect_to root_path, alert: "Payment unsuccessful!"
+      redirect_to root_path, alert: 'Payment unsuccessful!'
     end
   end
 end
