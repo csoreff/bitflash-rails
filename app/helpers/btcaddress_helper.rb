@@ -9,9 +9,9 @@ module BtcaddressHelper
 
   def incoming_or_outgoing?(transaction)
     if transaction.user_id == current_user.id
-      "Outgoing"
+      'Outgoing'
     else
-      "Incoming"
+      'Incoming'
     end
   end
 

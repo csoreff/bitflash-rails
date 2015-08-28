@@ -4,15 +4,15 @@ class User < ActiveRecord::Base
   has_many :friendships
   has_many :btcaddresses
   has_many :transactions
-  has_many :friends, :through => :friendships
+  has_many :friends, through: :friendships
 
-  has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
-  has_many :inverse_friends, :through => :inverse_friendships, :source => :user
+  has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
+  has_many :inverse_friends, through: :inverse_friendships, source: :user
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  def authenticate_user(account_type='default')
+  def authenticate_user(account_type = 'default')
     client = Round.client
     client.authenticate_identify(api_token: ENV['ROUND_API_TOKEN'])
     authenticated_user = client.authenticate_device(
@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
     authenticated_user.wallet.accounts[account_type]
   end
 
-  def create_new_address(account_type='default')
+  def create_new_address(account_type = 'default')
     new_address = authenticate_user(account_type).addresses.create
     new_address.string
   end
@@ -39,8 +39,11 @@ class User < ActiveRecord::Base
   def make_btc_payment(passphrase, payee_address, amount)
     authenticated_user = authenticate_user
     authenticated_user.wallet.unlock(passphrase)
-    transaction = authenticated_user.pay([{address: payee_address,
-      amount: amount.to_i}], 1, 'https://bitflash.herokuapp.com')
+    transaction = authenticated_user.pay(
+      [{
+        address: payee_address,
+        amount: amount.to_i
+      }], 1, 'https://bitflash.herokuapp.com')
   end
 
   def get_transactions

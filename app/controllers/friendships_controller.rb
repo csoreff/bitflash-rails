@@ -10,14 +10,14 @@ class FriendshipsController < ApplicationController
     if friend
       @friendship = current_user.friendships.build(friend_id: friend.id)
       if @friendship.save
-        flash[:notice] = "Friend added."
+        flash[:notice] = 'Friend added.'
         redirect_to root_url
       else
-        flash[:error] = "Unable to add friend."
+        flash[:error] = 'Unable to add friend.'
         redirect_to root_url
       end
     else
-      flash[:notice] = "Friend not found."
+      flash[:notice] = 'Friend not found.'
       redirect_to root_url
     end
   end
